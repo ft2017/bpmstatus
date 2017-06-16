@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery.getJSON demo</title>
+
+        <script src="jquery.min.js"></script>
+        <script src="script.js"></script>
+
+    </head>
+    <body onload="onload();">
+        <h1>檢查是不是全製程的合法單號</h1>
+        <!--https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button-->
+
+ 
+        <input type="button" onClick="btn1Click()" value="sample1"/>
+        <input type="button" onClick="btn2Click()" value="sample2"/>
+        <input type="button" onClick="btn3Click()" value="reset"/>
+        
+        
+        <br>sample1: 100SF001-1705000377
+        <br>sample2: 100XF001-1705000377
+        
+        <h3>單號:<span id="number"></span> </h3>
+        <h3>是否全製程的合法單號?<span id="result"></span></h3>
+        <h3>說明:<span id="description"></span> </h3>
+
+    </body>
+</html>

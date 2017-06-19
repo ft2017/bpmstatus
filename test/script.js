@@ -6,6 +6,8 @@
 
 
 //https://stackoverflow.com/questions/11810874/how-to-get-an-input-text-value-in-javascript
+
+
 var txt1;
 function onload() {
     txt1 = document.getElementById('txt1');

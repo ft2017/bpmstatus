@@ -1,0 +1,59 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+
+        <!--        <form action="form_action.asp" method="get">
+                    
+                    工单号: <input type="text" name="gdh" />
+                    <script type="text/javascript">
+                    function a() {
+                        var lin = document.getElementById("gdh").value;
+                        location.href = 'aaa' + lin;
+                        document.getElementById('button1').innerHTML = lin;
+                        return lin;
+                    }
+                </script>
+                    <input type="button" name="button1" value="这次是真的啦"  onclick="function a()"/>
+                    window.location = 'http://10.10.1.80:8080/ft/number_checker?num=<%%>'
+                    <button type="submit" onclick="location.href = 'http://10.10.1.80:8080/ft/number_checker?num=100SF001-1705000377'">屠龙宝刀点击就送</button>
+                    <a href="http://10.10.1.80:8080/ft/number_checker?num=100SF001-1705000377">屠龙宝刀点击就送</a>
+                </form>-->
+
+<!--    <script type="text/javascript">
+        var url = 'https://api.douban.com/v2/user/abei?callback=?';
+        $.getJSON(url,function(data){
+            console.log(data);             
+        });
+        </script>-->
+        <div id="result"></div>
+            <!-- JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var url = 'https://api.douban.com/v2/user/abei?callback=?';
+        $.getJSON(url,function(data){
+            $('#result').append('<p>loc_id:'+data.loc_id+'</p>');
+            $('#result').append('<p>name:'+data.name+'</p>');  
+            $('#result').append('<p>created:'+data.created+'</p>'); 
+            //后面的也都一样            
+        });
+    </script>
+        
+
+        <!--<button type="submit" onclick="location.href = 'http://10.10.1.80:8080/ft/number_checker?num=100SF001-1705000377'">按钮</button>-->
+        
+
+
+    </body>
+</html>

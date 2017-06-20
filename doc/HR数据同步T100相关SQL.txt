@@ -1,0 +1,42 @@
+1、HR同步到T100的程序：员工同步作业cwsp001和同步结果查询cwsq001
+
+
+					   
+DEFINE g_tmp01          RECORD
+       ooag001          LIKE ooag_t.ooag001,    #员工编号
+       ooag008          LIKE ooag_t.ooag008,    #姓
+       ooag010          LIKE ooag_t.ooag010,    #名
+       ooag003          LIKE ooag_t.ooag003,    #部门编号
+       ooag005          LIKE ooag_t.ooag005,    #职称编号
+       ooag015          LIKE ooag_t.ooag015,    #审核层级编号
+       ooag018          LIKE ooag_t.ooag018,    #直属主管编号
+       ooagud001        LIKE ooag_t.ooagud001,  #到厂日
+       ooagud002        LIKE ooag_t.ooagud002   #离职日
+                        END RECORD
+						SELECT * FROM ooag_t WHERE OOAGENT=10 
+						应该是员工资料
+						
+PRIVATE TYPE type_wsaauc RECORD
+        wsaaucent      LIKE wsaauc_t.wsaaucent,
+        wsaauc001      LIKE wsaauc_t.wsaauc001,
+        wsaauc002      LIKE wsaauc_t.wsaauc002,
+        wsaauc003      LIKE wsaauc_t.wsaauc003,
+        wsaauc004      LIKE wsaauc_t.wsaauc004,
+        wsaauc005      LIKE wsaauc_t.wsaauc005,
+        wsaauc006      LIKE wsaauc_t.wsaauc006,
+        wsaauc007      LIKE wsaauc_t.wsaauc007,
+        wsaauc008      LIKE wsaauc_t.wsaauc008,
+        wsaauc009      LIKE wsaauc_t.wsaauc009
+                       END RECORD
+						SELECT * FROM wsaauc_t WHERE WSAAUCENT=10
+						应该是同步结果查询
+
+						
+PRIVATE TYPE type_master RECORD
+       ooag001 LIKE ooag_t.ooag001, 
+   ooag003 LIKE ooag_t.ooag003, 
+   stagenow LIKE type_t.chr80,
+       wc               STRING
+       END RECORD						
+
+

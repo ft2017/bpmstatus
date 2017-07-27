@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
-<title>Ô±¹¤µ÷Ğİ&amp;µ÷°àÉêÇë±í</title>
+<title>å‘˜å·¥è°ƒä¼‘&amp;è°ƒç­ç”³è¯·è¡¨</title>
 <style type="text/css">
 <!--
-.style7 {font-size: 12px;"¿¬Ìå_GB2312";}
+.style7 {font-size: 12px;"æ¥·ä½“_GB2312";}
 .style9 {
 	font-size: 20px;
-	font-family:"·ÂËÎ_2312";
+	font-family:"ä»¿å®‹_2312";
 	font-weight: bold;
 }
 .style10 {color: #999999}
@@ -35,7 +35,7 @@ this.sltDate;
 this.target;
 this.source;
 
-/************** ¼ÓÈëÈÕÀúµ×°å¼°ÒõÓ° *********************/
+/************** åŠ å…¥æ—¥å†åº•æ¿åŠé˜´å½± *********************/
 this.addCalendarPad=function(){
    document.write("<div id='divCalendarpad' style='position:absolute;top:100;left:0;width:255;height:187;display:none;'>");
    document.write("<iframe frameborder=0 height=189 width=250></iframe>");
@@ -43,7 +43,7 @@ this.addCalendarPad=function(){
    document.write("</div>");
    calendar.calendarPad=document.all.divCalendarpad;
 }
-/************** ¼ÓÈëÈÕÀúÃæ°å *********************/
+/************** åŠ å…¥æ—¥å†é¢æ¿ *********************/
 this.addCalendarBoard=function(){
    var BOARD=this;
    var divBoard=document.createElement("div");
@@ -56,11 +56,11 @@ this.addCalendarBoard=function(){
    tbBoard.cellPadding=0;
    tbBoard.cellSpacing=1;
 
-/************** ÉèÖÃ¸÷¹¦ÄÜ°´Å¥µÄ¹¦ÄÜ *********************/
+/************** è®¾ç½®å„åŠŸèƒ½æŒ‰é’®çš„åŠŸèƒ½ *********************/
    /*********** Calendar About Button ***************/
    trRow = tbBoard.insertRow(0);
    calendar.calendarAbout=calendar.insertTbCell(trRow,0,"-","center");
-   calendar.calendarAbout.title="°ïÖú ¿ì½İ¼ü:H";
+   calendar.calendarAbout.title="å¸®åŠ© å¿«æ·é”®:H";
    calendar.calendarAbout.onclick=function(){calendar.about();}
    /*********** Calendar Head ***************/
    tbCell=trRow.insertCell(1);
@@ -72,20 +72,20 @@ this.addCalendarBoard=function(){
    /*********** Calendar Close Button ***************/
    tbCell=trRow.insertCell(2);
    calendar.calendarClose = calendar.insertTbCell(trRow,2,"x","center");
-   calendar.calendarClose.title="¹Ø±Õ ¿ì½İ¼ü:ESC»òX";
+   calendar.calendarClose.title="å…³é—­ å¿«æ·é”®:ESCæˆ–X";
    calendar.calendarClose.onclick=function(){calendar.hide();}
 
    /*********** Calendar PrevYear Button ***************/
    trRow = tbBoard.insertRow(1);
    calendar.prevYear = calendar.insertTbCell(trRow,0,"<<<","center");
-   calendar.prevYear.title="ÉÏÒ»Äê ¿ì½İ¼ü:¡ü";
+   calendar.prevYear.title="ä¸Šä¸€å¹´ å¿«æ·é”®:â†‘";
    calendar.prevYear.onmousedown=function(){
     calendar.currentDate[0]--;
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
    }
    /*********** Calendar PrevMonth Button ***************/
    calendar.prevMonth = calendar.insertTbCell(trRow,1,"<<","center");
-   calendar.prevMonth.title="ÉÏÒ»ÔÂ ¿ì½İ¼ü:¡û";
+   calendar.prevMonth.title="ä¸Šä¸€æœˆ å¿«æ·é”®:â†";
    calendar.prevMonth.onmousedown=function(){
     calendar.currentDate[1]--;
     if(calendar.currentDate[1]==0){
@@ -95,8 +95,8 @@ this.addCalendarBoard=function(){
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
    }
    /*********** Calendar Today Button ***************/
-   calendar.goToday = calendar.insertTbCell(trRow,2,"½ñÌì","center",3);
-   calendar.goToday.title="Ñ¡Ôñ½ñÌì ¿ì½İ¼ü:T";
+   calendar.goToday = calendar.insertTbCell(trRow,2,"ä»Šå¤©","center",3);
+   calendar.goToday.title="é€‰æ‹©ä»Šå¤© å¿«æ·é”®:T";
    calendar.goToday.onclick=function(){
 if(calendar.returnTime) 
      calendar.sltDate=calendar.today[0]+"-"+calendar.formatTime(calendar.today[1])+"-"+calendar.formatTime(calendar.today[2])+" "+calendar.formatTime(calendar.today[3])+":"+calendar.formatTime(calendar.today[4])
@@ -108,7 +108,7 @@ else
    }
    /*********** Calendar NextMonth Button ***************/
    calendar.nextMonth = calendar.insertTbCell(trRow,3,">","center");
-   calendar.nextMonth.title="ÏÂÒ»ÔÂ ¿ì½İ¼ü:¡ú";
+   calendar.nextMonth.title="ä¸‹ä¸€æœˆ å¿«æ·é”®:â†’";
    calendar.nextMonth.onmousedown=function(){
     calendar.currentDate[1]++;
     if(calendar.currentDate[1]==13){
@@ -119,7 +119,7 @@ else
    }
    /*********** Calendar NextYear Button ***************/
    calendar.nextYear = calendar.insertTbCell(trRow,4,">>","center");
-   calendar.nextYear.title="ÏÂÒ»Äê ¿ì½İ¼ü:¡ı";
+   calendar.nextYear.title="ä¸‹ä¸€å¹´ å¿«æ·é”®:â†“";
    calendar.nextYear.onmousedown=function(){
     calendar.currentDate[0]++;
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
@@ -127,7 +127,7 @@ else
    }
 
    trRow = tbBoard.insertRow(2);
-   var cnDateName = new Array("ÈÕ","Ò»","¶ş","Èı","ËÄ","Îå","Áù");
+   var cnDateName = new Array("æ—¥","ä¸€","äºŒ","ä¸‰","å››","äº”","å…­");
    for (var i = 0; i < 7; i++) {
     tbCell=trRow.insertCell(i)
     tbCell.innerText=cnDateName[i];
@@ -155,7 +155,7 @@ else
    trRow = tbBoard.insertRow(4);
    tbCell=trRow.insertCell(0);
    calendar.prevHours = calendar.insertTbCell(trRow,0,"-","center");
-   calendar.prevHours.title="Ğ¡Ê±µ÷Õû ¿ì½İ¼ü:Home";
+   calendar.prevHours.title="å°æ—¶è°ƒæ•´ å¿«æ·é”®:Home";
    calendar.prevHours.onmousedown=function(){
    calendar.currentDate[3]--;
    if(calendar.currentDate[3]==-1) calendar.currentDate[3]=23;
@@ -163,7 +163,7 @@ else
 }
    tbCell=trRow.insertCell(1);
    calendar.nextHours = calendar.insertTbCell(trRow,1,"+","center");
-   calendar.nextHours.title="Ğ¡Ê±µ÷Õû ¿ì½İ¼ü:End";
+   calendar.nextHours.title="å°æ—¶è°ƒæ•´ å¿«æ·é”®:End";
    calendar.nextHours.onmousedown=function(){
    calendar.currentDate[3]++;
    if(calendar.currentDate[3]==24) calendar.currentDate[3]=0;
@@ -177,7 +177,7 @@ else
    calendar.bottom=tbCell;
    tbCell=trRow.insertCell(3);
    calendar.prevMinutes = calendar.insertTbCell(trRow,3,"-","center");
-   calendar.prevMinutes.title="·ÖÖÓµ÷Õû ¿ì½İ¼ü:PageUp";
+   calendar.prevMinutes.title="åˆ†é’Ÿè°ƒæ•´ å¿«æ·é”®:PageUp";
    calendar.prevMinutes.onmousedown=function(){
    calendar.currentDate[4]--;
    if(calendar.currentDate[4]==-1) calendar.currentDate[4]=59;
@@ -185,7 +185,7 @@ else
 }
    tbCell=trRow.insertCell(4);
    calendar.nextMinutes = calendar.insertTbCell(trRow,4,"+","center");
-   calendar.nextMinutes.title="·ÖÖÓµ÷Õû ¿ì½İ¼ü:PageDown";
+   calendar.nextMinutes.title="åˆ†é’Ÿè°ƒæ•´ å¿«æ·é”®:PageDown";
    calendar.nextMinutes.onmousedown=function(){
    calendar.currentDate[4]++;
    if(calendar.currentDate[4]==60) calendar.currentDate[4]=0;
@@ -194,7 +194,7 @@ else
 
 }
 
-/************** ¼ÓÈë¹¦ÄÜ°´Å¥¹«¹²ÑùÊ½ *********************/
+/************** åŠ å…¥åŠŸèƒ½æŒ‰é’®å…¬å…±æ ·å¼ *********************/
 this.insertTbCell=function(trRow,cellIndex,TXT,trAlign,tbColSpan){
    var tbCell=trRow.insertCell(cellIndex);
    if(tbColSpan!=undefined) tbCell.colSpan=tbColSpan;
@@ -234,7 +234,7 @@ this.setDefaultDate=function(){
 /****************** Show Calendar *********************/
 this.show=function(targetObject,returnTime,defaultDate,sourceObject){
    if(targetObject==undefined) {
-    alert("Î´ÉèÖÃÄ¿±ê¶ÔÏó. \n·½·¨: ATCALENDAR.show(obj Ä¿±ê¶ÔÏó,boolean ÊÇ·ñ·µ»ØÊ±¼ä,string Ä¬ÈÏÈÕÆÚ,obj µã»÷¶ÔÏó);\n\nÄ¿±ê¶ÔÏó:½ÓÊÜÈÕÆÚ·µ»ØÖµµÄ¶ÔÏó.\nÄ¬ÈÏÈÕÆÚ:¸ñÊ½Îª\"yyyy-mm-dd\",È±Ê¡Îªµ±Ç°ÈÕÆÚ.\nµã»÷¶ÔÏó:µã»÷Õâ¸ö¶ÔÏóµ¯³öcalendar,Ä¬ÈÏÎªÄ¿±ê¶ÔÏó.\n");
+    alert("æœªè®¾ç½®ç›®æ ‡å¯¹è±¡. \næ–¹æ³•: ATCALENDAR.show(obj ç›®æ ‡å¯¹è±¡,boolean æ˜¯å¦è¿”å›æ—¶é—´,string é»˜è®¤æ—¥æœŸ,obj ç‚¹å‡»å¯¹è±¡);\n\nç›®æ ‡å¯¹è±¡:æ¥å—æ—¥æœŸè¿”å›å€¼çš„å¯¹è±¡.\né»˜è®¤æ—¥æœŸ:æ ¼å¼ä¸º\"yyyy-mm-dd\",ç¼ºçœä¸ºå½“å‰æ—¥æœŸ.\nç‚¹å‡»å¯¹è±¡:ç‚¹å‡»è¿™ä¸ªå¯¹è±¡å¼¹å‡ºcalendar,é»˜è®¤ä¸ºç›®æ ‡å¯¹è±¡.\n");
     return false;
    }
    else calendar.target=targetObject;
@@ -259,7 +259,7 @@ theDate[3]=calendar.today[3]; theDate[4]=calendar.today[4];
     var Datereg=/^\d{4}-\d{1,2}-\d{2}$/
     var DateTimereg=/^(\d{1,4})-(\d{1,2})-(\d{1,2}) (\d{1,2}):(\d{1,2})$/
     if((!defaultDate.match(Datereg)) && (!defaultDate.match(DateTimereg))){
-     alert("Ä¬ÈÏÈÕÆÚ(Ê±¼ä)µÄ¸ñÊ½²»ÕıÈ·£¡\t\n\nÄ¬ÈÏ¿É½ÓÊÜ¸ñÊ½Îª:\n1¡¢yyyy-mm-dd \n2¡¢yyyy-mm-dd hh:mm\n3¡¢(¿Õ)");
+     alert("é»˜è®¤æ—¥æœŸ(æ—¶é—´)çš„æ ¼å¼ä¸æ­£ç¡®ï¼\t\n\né»˜è®¤å¯æ¥å—æ ¼å¼ä¸º:\n1ã€yyyy-mm-dd \n2ã€yyyy-mm-dd hh:mm\n3ã€(ç©º)");
 calendar.setDefaultDate();
      return;
     }
@@ -287,11 +287,11 @@ theDate[4]=strDateTime[5];
 
    calendar.calendarPad.style.display="";
    var theRows = Math.ceil((theMonthLen)/7);
-   //Çå³ı¾ÉµÄÈÕÀú;
+   //æ¸…é™¤æ—§çš„æ—¥å†;
    while (calendar.body.rows.length > 0) {
     calendar.body.deleteRow(0)
    }
-   //½¨Á¢ĞÂµÄÈÕÀú;
+   //å»ºç«‹æ–°çš„æ—¥å†;
    var n=0;day=0;
    for(i=0;i<theRows;i++){
     theRow=calendar.body.insertRow(i);
@@ -309,8 +309,8 @@ theDate[4]=strDateTime[5];
     }
    }
 
-   //****************µ÷ÕûÈÕÀúÎ»ÖÃ**************//
-   var offsetPos=calendar.getAbsolutePos(calendar.source);//¼ÆËã¶ÔÏóµÄÎ»ÖÃ;
+   //****************è°ƒæ•´æ—¥å†ä½ç½®**************//
+   var offsetPos=calendar.getAbsolutePos(calendar.source);//è®¡ç®—å¯¹è±¡çš„ä½ç½®;
    if((document.body.offsetHeight-(offsetPos.y+calendar.source.offsetHeight-document.body.scrollTop))<calendar.calendarPad.style.pixelHeight){
     var calTop=offsetPos.y-calendar.calendarPad.style.pixelHeight;
    }
@@ -327,7 +327,7 @@ theDate[4]=strDateTime[5];
    calendar.calendarPad.style.pixelLeft=calLeft;
    calendar.calendarPad.style.pixelTop=calTop;
 }
-/****************** ¼ÆËã¶ÔÏóµÄÎ»ÖÃ *************************/
+/****************** è®¡ç®—å¯¹è±¡çš„ä½ç½® *************************/
 this.getAbsolutePos = function(el) {
    var r = { x: el.offsetLeft, y: el.offsetTop };
    if (el.offsetParent) {
@@ -338,7 +338,7 @@ this.getAbsolutePos = function(el) {
    return r;
 };
 
-//************* ²åÈëÈÕÆÚµ¥Ôª¸ñ **************/
+//************* æ’å…¥æ—¥æœŸå•å…ƒæ ¼ **************/
 this.insertBodyCell=function(theRow,j,day,targetObject){
    var theCell=theRow.insertCell(j);
    if(j==0) var theBgColor="#FF9999";
@@ -371,12 +371,12 @@ else
     calendar.hide();
    }
 }
-/************** È¡µÃÔÂ·İµÄµÚÒ»ÌìÎªĞÇÆÚ¼¸ *********************/
+/************** å–å¾—æœˆä»½çš„ç¬¬ä¸€å¤©ä¸ºæ˜ŸæœŸå‡  *********************/
 this.getFirstDay=function(theYear, theMonth){
    var firstDate = new Date(theYear,theMonth-1,1);
    return firstDate.getDay();
 }
-/************** È¡µÃÔÂ·İ¹²ÓĞ¼¸Ìì *********************/
+/************** å–å¾—æœˆä»½å…±æœ‰å‡ å¤© *********************/
 
 this.getMonthLen=function(theYear, theMonth) {
    theMonth--;
@@ -386,36 +386,36 @@ this.getMonthLen=function(theYear, theMonth) {
    var len = Math.ceil((nextMonth.getTime() - thisMonth.getTime())/oneDay);
    return len;
 }
-/************** Òş²ØÈÕÀú *********************/
+/************** éšè—æ—¥å† *********************/
 this.hide=function(){
    //calendar.clearEventKey();
    calendar.calendarPad.style.display="none";
    
 }
-/************** ´ÓÕâÀï¿ªÊ¼ *********************/
+/************** ä»è¿™é‡Œå¼€å§‹ *********************/
 this.setup=function(defaultDate){
    calendar.addCalendarPad();
    calendar.addCalendarBoard();
    calendar.setDefaultDate();
 }
-/************** ¸ñÊ½»¯Ê±¼ä *********************/
+/************** æ ¼å¼åŒ–æ—¶é—´ *********************/
 this.formatTime = function(str) {
 str = ("00"+str);
 return str.substr(str.length-2);
 }
 
-/************** ¹ØÓÚAgetimeCalendar *********************/
+/************** å…³äºAgetimeCalendar *********************/
 this.about=function(){
-   var strAbout = "\nWeb ÈÕÀúÑ¡ÔñÊäÈë¿Ø¼ş²Ù×÷ËµÃ÷:\n\n";
-   strAbout+="-\t: ¹ØÓÚ\n";
-   strAbout+="x\t: Òş²Ø\n";
-   strAbout+="<<\t: ÉÏÒ»Äê\n";
-   strAbout+="<\t: ÉÏÒ»ÔÂ\n";
+   var strAbout = "\nWeb æ—¥å†é€‰æ‹©è¾“å…¥æ§ä»¶æ“ä½œè¯´æ˜:\n\n";
+   strAbout+="-\t: å…³äº\n";
+   strAbout+="x\t: éšè—\n";
+   strAbout+="<<\t: ä¸Šä¸€å¹´\n";
+   strAbout+="<\t: ä¸Šä¸€æœˆ\n";
 
-   strAbout+="½ñÈÕ\t: ·µ»Øµ±ÌìÈÕÆÚ\n";
-   strAbout+=">\t: ÏÂÒ»ÔÂ\n";
-   strAbout+="<<\t: ÏÂÒ»Äê\n";
-   strAbout+="\nWebÈÕÀúÑ¡ÔñÊäÈë¿Ø¼ş\tVer:v1.0\t\nDesigned By:wxb \t\t2004.11.22\t\n";
+   strAbout+="ä»Šæ—¥\t: è¿”å›å½“å¤©æ—¥æœŸ\n";
+   strAbout+=">\t: ä¸‹ä¸€æœˆ\n";
+   strAbout+="<<\t: ä¸‹ä¸€å¹´\n";
+   strAbout+="\nWebæ—¥å†é€‰æ‹©è¾“å…¥æ§ä»¶\tVer:v1.0\t\nDesigned By:wxb \t\t2004.11.22\t\n";
    alert(strAbout);
 }
 
@@ -426,10 +426,10 @@ if(calendar.calendarPad.style.display=="none"){
 }
 switch(window.event.keyCode){
    case 27 : calendar.hide(); break; //ESC
-   case 37 : calendar.prevMonth.onmousedown(); break;//¡û
-   case 38 : calendar.prevYear.onmousedown();break; //¡ü
-   case 39 : calendar.nextMonth.onmousedown(); break;//¡ú
-   case 40 : calendar.nextYear.onmousedown(); break;//¡ı
+   case 37 : calendar.prevMonth.onmousedown(); break;//â†
+   case 38 : calendar.prevYear.onmousedown();break; //â†‘
+   case 39 : calendar.nextMonth.onmousedown(); break;//â†’
+   case 40 : calendar.nextYear.onmousedown(); break;//â†“
    case 84 : calendar.goToday.onclick(); break;//T
    case 88 : calendar.hide(); break;   //X
    case 72 : calendar.about(); break;   //H 
@@ -473,9 +473,9 @@ document.writeln(str);
 var _fieldname;
 function _SetTime(tt) {
     _fieldname = tt;
-    var ttop = tt.offsetTop;    //TT¿Ø¼şµÄ¶¨Î»µã¸ß
-    var thei = tt.clientHeight;    //TT¿Ø¼ş±¾ÉíµÄ¸ß
-    var tleft = tt.offsetLeft;    //TT¿Ø¼şµÄ¶¨Î»µã¿í
+    var ttop = tt.offsetTop;    //TTæ§ä»¶çš„å®šä½ç‚¹é«˜
+    var thei = tt.clientHeight;    //TTæ§ä»¶æœ¬èº«çš„é«˜
+    var tleft = tt.offsetLeft;    //TTæ§ä»¶çš„å®šä½ç‚¹å®½
     while (tt = tt.offsetParent) {
         ttop += tt.offsetTop;
         tleft += tt.offsetLeft;
@@ -502,7 +502,7 @@ function _select() {
           <br />
             <span class="STYLE13">
           
- Ô±¹¤µ÷Ğİ&amp;µ÷°àÉêÇë±í</span></p>
+ å‘˜å·¥è°ƒä¼‘&amp;è°ƒç­ç”³è¯·è¡¨</span></p>
         
             
         </div></td>
@@ -511,17 +511,17 @@ function _select() {
         <td class="style7">
           <table width="907" border="0">
             <tr>
-              <td width="624">²¿ÃÅ£º
+              <td width="624">éƒ¨é—¨ï¼š
                 <input name="y" type="text" id="y" style="width: 50px" />
-×é±ğ£º
+ç»„åˆ«ï¼š
 <input name="y3" type="text" id="y3" style="width: 50px" />
-°à±ğ:
+ç­åˆ«:
 <input name="y4" type="text" id="y4" style="width: 50px" />
-ÉêÇëÈÕÆÚ:
+ç”³è¯·æ—¥æœŸ:
 <input name="textfield2" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="12" /></td>
-              <td width="60"><label> µ÷ Ğİ</label></td>
+              <td width="60"><label> è°ƒ ä¼‘</label></td>
               <td width="69"><input name="radio" type="radio" id="radio" value="radio" checked="checked" /></td>
-              <td width="56">µ÷ °à</td>
+              <td width="56">è°ƒ ç­</td>
               <td width="76"><label>
                 <input type="radio" name="radio" id="radio2" value="radio2" />
               </label></td>
@@ -533,31 +533,31 @@ function _select() {
               <td align="center" bgcolor="#000000">
       <table width="891" border="1" cellpadding="1" cellspacing="0" bordercolor="#000000" style="width: 908px">
         <tr bgcolor="#FFFFFF" class="style1">
-          <td width="12" rowspan="2"><strong>ĞòºÅ</strong></td>
-          <td width="55" rowspan="2" align="center"><strong>¹¤ºÅ</strong></td>
-          <td width="55" rowspan="2" align="center">ĞÕÃû</td>
-          <td width="65" rowspan="2" align="center"><strong>Ö°Îñ</strong></td>
-          <td colspan="2" align="center"><strong>Ô­ÉÏ°à/¼Ó°à</strong></td>
-          <td colspan="2" align="center"><strong>±»µ÷°à/µ÷Ğİ</strong></td>
-          <td width="65" rowspan="2" align="center"><strong>ÊÂÓÉËµÃ÷</strong></td>
+          <td width="12" rowspan="2"><strong>åºå·</strong></td>
+          <td width="55" rowspan="2" align="center"><strong>å·¥å·</strong></td>
+          <td width="55" rowspan="2" align="center">å§“å</td>
+          <td width="65" rowspan="2" align="center"><strong>èŒåŠ¡</strong></td>
+          <td colspan="2" align="center"><strong>åŸä¸Šç­/åŠ ç­</strong></td>
+          <td colspan="2" align="center"><strong>è¢«è°ƒç­/è°ƒä¼‘</strong></td>
+          <td width="65" rowspan="2" align="center"><strong>äº‹ç”±è¯´æ˜</strong></td>
           </tr>
         <tr bgcolor="#FFFFFF" class="style1">
-          <td align="center"><strong>ÈÕÆÚ</strong></td>
-          <td width="120" align="center"><strong>Ê±¼ä</strong></td>
-          <td width="175" align="center"><strong>ÈÕÆÚ</strong></td>
-          <td width="120" align="center"><strong>Ê±¼ä</strong></td>
+          <td align="center"><strong>æ—¥æœŸ</strong></td>
+          <td width="120" align="center"><strong>æ—¶é—´</strong></td>
+          <td width="175" align="center"><strong>æ—¥æœŸ</strong></td>
+          <td width="120" align="center"><strong>æ—¶é—´</strong></td>
           </tr>
         <tr bgcolor="#FFFFFF" class="style1">
           <td>1</td>
           <td><input name="a001" type="text" id="a001" style="width: 55px; height: 15px;" size="9" maxlength="9" ></td>
           <td><input name="b" type="text" id="b" style="width: 55px; height: 15px;" /></td>
           <td><input name="b001" type="text" id="b001" style="width: 65px; height: 15px;" ></td>
-          <td width="175"><input name="textfield" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield3" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" /></td>
-          <td><input name="time1_start" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time1_end" type="text"   onclick="_SetTime(this)" size="5"/></td>
+          <td width="175"><input name="textfield" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield3" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" /></td>
+          <td><input name="time1_start" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time1_end" type="text"   onclick="_SetTime(this)" size="5"/></td>
           <td><input name="te13" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te13" />
-          ÖÁ<input name="te23" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te23" /></td>
+          è‡³<input name="te23" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te23" /></td>
           <td><input name="time2_start" type="text"   onclick="_SetTime(this)" size="5" id="time2_start"/>
-          ÖÁ<input name="time2_end" type="text"   onclick="_SetTime(this)" size="5" id="time2_end"/></td>
+          è‡³<input name="time2_end" type="text"   onclick="_SetTime(this)" size="5" id="time2_end"/></td>
           <td><input name="j" type="text" id="j" style="width: 65px; height: 15px;" /></td>
         </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -565,12 +565,12 @@ function _select() {
           <td><input name="a" type="text" id="a" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b2" type="text" id="b2" style="width: 55px; height: 15px;" /></td>
           <td><input name="b10" type="text" id="b10" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield4" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield14" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield14" /></td>
-          <td><input name="time3_star" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time3_end" type="text"   onclick="_SetTime(this)" size="5"/></td>
+          <td width="175"><input name="textfield4" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield14" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield14" /></td>
+          <td><input name="time3_star" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time3_end" type="text"   onclick="_SetTime(this)" size="5"/></td>
           <td><input name="te14" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te14" />
-          ÖÁ<input name="te24" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te24" /></td>
+          è‡³<input name="te24" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te24" /></td>
           <td><input name="ti13" type="text"   onclick="_SetTime(this)" size="5" id="ti13"/>
-          ÖÁ<input name="ti23" type="text"   onclick="_SetTime(this)" size="5" id="ti23"/></td>
+          è‡³<input name="ti23" type="text"   onclick="_SetTime(this)" size="5" id="ti23"/></td>
           <td><input name="j2" type="text" id="j2" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -578,12 +578,12 @@ function _select() {
           <td><input name="a2" type="text" id="a2" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b3" type="text" id="b3" style="width: 55px; height: 15px;" /></td>
           <td><input name="b12" type="text" id="b12" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield5" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield15" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield15" /></td>
-          <td><input name="time4" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time12" type="text"   onclick="_SetTime(this)" size="5" id="time12"/></td>
+          <td width="175"><input name="textfield5" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield15" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield15" /></td>
+          <td><input name="time4" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time12" type="text"   onclick="_SetTime(this)" size="5" id="time12"/></td>
           <td><input name="te15" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te15" />
-          ÖÁ<input name="te25" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te25" /></td>
+          è‡³<input name="te25" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te25" /></td>
           <td><input name="ti14" type="text"   onclick="_SetTime(this)" size="5" id="ti14"/>
-          ÖÁ<input name="ti24" type="text"   onclick="_SetTime(this)" size="5" id="ti24"/></td>
+          è‡³<input name="ti24" type="text"   onclick="_SetTime(this)" size="5" id="ti24"/></td>
           <td><input name="j3" type="text" id="j3" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -591,12 +591,12 @@ function _select() {
           <td><input name="a3" type="text" id="a3" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b4" type="text" id="b4" style="width: 55px; height: 15px;" /></td>
           <td><input name="b13" type="text" id="b13" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield6" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield16" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield16" /></td>
-          <td><input name="time5" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time13" type="text"   onclick="_SetTime(this)" size="5" id="time13"/></td>
+          <td width="175"><input name="textfield6" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield16" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield16" /></td>
+          <td><input name="time5" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time13" type="text"   onclick="_SetTime(this)" size="5" id="time13"/></td>
           <td><input name="te16" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te16" />
-          ÖÁ<input name="te26" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te26" /></td>
+          è‡³<input name="te26" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te26" /></td>
           <td><input name="ti15" type="text"   onclick="_SetTime(this)" size="5" id="ti15"/>
-          ÖÁ<input name="ti25" type="text"   onclick="_SetTime(this)" size="5" id="ti25"/></td>
+          è‡³<input name="ti25" type="text"   onclick="_SetTime(this)" size="5" id="ti25"/></td>
           <td><input name="j4" type="text" id="j4" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -604,12 +604,12 @@ function _select() {
           <td><input name="a4" type="text" id="a4" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b5" type="text" id="b5" style="width: 55px; height: 15px;" /></td>
           <td><input name="b14" type="text" id="b14" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield7" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield17" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield17" /></td>
-          <td><input name="time6" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time14" type="text"   onclick="_SetTime(this)" size="5" id="time14"/></td>
+          <td width="175"><input name="textfield7" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield17" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield17" /></td>
+          <td><input name="time6" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time14" type="text"   onclick="_SetTime(this)" size="5" id="time14"/></td>
           <td><input name="te17" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te17" />
-          ÖÁ<input name="te27" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te27" /></td>
+          è‡³<input name="te27" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te27" /></td>
           <td><input name="ti16" type="text"   onclick="_SetTime(this)" size="5" id="ti16"/>
-          ÖÁ<input name="ti26" type="text"   onclick="_SetTime(this)" size="5" id="ti26"/></td>
+          è‡³<input name="ti26" type="text"   onclick="_SetTime(this)" size="5" id="ti26"/></td>
           <td><input name="j5" type="text" id="j5" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -617,12 +617,12 @@ function _select() {
           <td><input name="a5" type="text" id="a5" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b6" type="text" id="b6" style="width: 55px; height: 15px;" /></td>
           <td><input name="b15" type="text" id="b15" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield8" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield18" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield18" /></td>
-          <td><input name="time7" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time15" type="text"   onclick="_SetTime(this)" size="5" id="time15"/></td>
+          <td width="175"><input name="textfield8" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield18" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield18" /></td>
+          <td><input name="time7" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time15" type="text"   onclick="_SetTime(this)" size="5" id="time15"/></td>
           <td><input name="te18" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te18" />
-          ÖÁ<input name="te28" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te28" /></td>
+          è‡³<input name="te28" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te28" /></td>
           <td><input name="ti17" type="text"   onclick="_SetTime(this)" size="5" id="ti17"/>
-          ÖÁ<input name="ti27" type="text"   onclick="_SetTime(this)" size="5" id="ti27"/></td>
+          è‡³<input name="ti27" type="text"   onclick="_SetTime(this)" size="5" id="ti27"/></td>
           <td><input name="j6" type="text" id="j6" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -630,12 +630,12 @@ function _select() {
           <td><input name="a6" type="text" id="a6" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b7" type="text" id="b7" style="width: 55px; height: 15px;" /></td>
           <td><input name="b16" type="text" id="b16" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield9" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield19" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield19" /></td>
-          <td><input name="time8" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time16" type="text"   onclick="_SetTime(this)" size="5" id="time16"/></td>
+          <td width="175"><input name="textfield9" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield19" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield19" /></td>
+          <td><input name="time8" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time16" type="text"   onclick="_SetTime(this)" size="5" id="time16"/></td>
           <td><input name="te19" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te19" />
-          ÖÁ<input name="te29" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te29" /></td>
+          è‡³<input name="te29" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te29" /></td>
           <td><input name="ti18" type="text"   onclick="_SetTime(this)" size="5" id="ti18"/>
-          ÖÁ<input name="ti28" type="text"   onclick="_SetTime(this)" size="5" id="ti28"/></td>
+          è‡³<input name="ti28" type="text"   onclick="_SetTime(this)" size="5" id="ti28"/></td>
           <td><input name="j7" type="text" id="j7" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -643,12 +643,12 @@ function _select() {
           <td><input name="a7" type="text" id="a7" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b8" type="text" id="b8" style="width: 55px; height: 15px;" /></td>
           <td><input name="b17" type="text" id="b17" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield10" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield20" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield20" /></td>
-          <td><input name="time9" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time17" type="text"   onclick="_SetTime(this)" size="5" id="time17"/></td>
+          <td width="175"><input name="textfield10" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield20" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield20" /></td>
+          <td><input name="time9" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time17" type="text"   onclick="_SetTime(this)" size="5" id="time17"/></td>
           <td><input name="te20" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te20" />
-          ÖÁ<input name="te30" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te30" /></td>
+          è‡³<input name="te30" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te30" /></td>
           <td><input name="ti19" type="text"   onclick="_SetTime(this)" size="5" id="ti19"/>
-          ÖÁ<input name="ti29" type="text"   onclick="_SetTime(this)" size="5" id="ti29"/></td>
+          è‡³<input name="ti29" type="text"   onclick="_SetTime(this)" size="5" id="ti29"/></td>
           <td><input name="j8" type="text" id="j8" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -656,12 +656,12 @@ function _select() {
           <td><input name="a8" type="text" id="a8" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b9" type="text" id="b9" style="width: 55px; height: 15px;" /></td>
           <td><input name="b18" type="text" id="b18" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield11" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield21" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield21" /></td>
-          <td><input name="time10" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time18" type="text"   onclick="_SetTime(this)" size="5" id="time18"/></td>
+          <td width="175"><input name="textfield11" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield21" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield21" /></td>
+          <td><input name="time10" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time18" type="text"   onclick="_SetTime(this)" size="5" id="time18"/></td>
           <td><input name="te21" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te21" />
-          ÖÁ<input name="te31" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te31" /></td>
+          è‡³<input name="te31" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te31" /></td>
           <td><input name="ti20" type="text"   onclick="_SetTime(this)" size="5" id="ti20"/>
-          ÖÁ<input name="ti30" type="text"   onclick="_SetTime(this)" size="5" id="ti30"/></td>
+          è‡³<input name="ti30" type="text"   onclick="_SetTime(this)" size="5" id="ti30"/></td>
           <td><input name="j9" type="text" id="j9" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -669,12 +669,12 @@ function _select() {
           <td><input name="a9" type="text" id="a9" style="width: 55px; height: 15px;" size="9" maxlength="9" /></td>
           <td><input name="b11" type="text" id="b11" style="width: 55px; height: 15px;" /></td>
           <td><input name="b19" type="text" id="b19" style="width: 65px; height: 15px;" /></td>
-          <td width="175"><input name="textfield12" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />ÖÁ<input name="textfield22" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield22" /></td>
-          <td><input name="time11" type="text"   onclick="_SetTime(this)" size="5"/>ÖÁ<input name="time19" type="text"   onclick="_SetTime(this)" size="5" id="time19"/></td>
+          <td width="175"><input name="textfield12" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" />è‡³<input name="textfield22" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="textfield22" /></td>
+          <td><input name="time11" type="text"   onclick="_SetTime(this)" size="5"/>è‡³<input name="time19" type="text"   onclick="_SetTime(this)" size="5" id="time19"/></td>
           <td><input name="te22" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te22" />
-          ÖÁ<input name="te32" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te32" /></td>
+          è‡³<input name="te32" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="9" id="te32" /></td>
           <td><input name="ti21" type="text"   onclick="_SetTime(this)" size="5" id="ti21"/>
-          ÖÁ<input name="ti31" type="text"   onclick="_SetTime(this)" size="5" id="ti31"/></td>
+          è‡³<input name="ti31" type="text"   onclick="_SetTime(this)" size="5" id="ti31"/></td>
           <td><input name="j10" type="text" id="j10" style="width: 65px; height: 15px;" /></td>
           </tr>
           <tr bgcolor="#FFFFFF" class="style1">
@@ -687,8 +687,8 @@ function _select() {
 size="1" 
 style="COLOR: #990000; BORDER-TOP-STYLE: dotted; BORDER-RIGHT-STYLE: dotted; BORDER-LEFT-STYLE: dotted; BORDER-BOTTOM-STYLE: dotted" /></td></tr>
 <tr>
-        <td class="style7"><span class="style11">¡ùÇëÒÀ¹æ¶¨Á÷³ÌÑ¡È¡Ç©ºËÈË†T¡¢Ç©ºË·½Ê½£º´®Ç©¡£<br />
-*ÉêÇëÁ÷³Ì£ºÉêÇëÈË&rarr;µ¥Î»Ö÷¹Ü&rarr;²¿ÃÅÖ÷¹Ü&rarr;¾­°ìÈËÊÂµ¥Î»</span></td>
+        <td class="style7"><span class="style11">â€»è¯·ä¾è§„å®šæµç¨‹é€‰å–ç­¾æ ¸äººï¿½Tã€ç­¾æ ¸æ–¹å¼ï¼šä¸²ç­¾ã€‚<br />
+*ç”³è¯·æµç¨‹ï¼šç”³è¯·äºº&rarr;å•ä½ä¸»ç®¡&rarr;éƒ¨é—¨ä¸»ç®¡&rarr;ç»åŠäººäº‹å•ä½</span></td>
       </tr>
         
       <tr>

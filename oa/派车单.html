@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>派车单</title>
+<style type="text/css">
+<!--
+.style7 {font-size: 12px;"楷体_GB2312";}
+.style11 {font-weight: bold; color: #FF0000; font-size: 14px; }
+.STYLE2 {
+	font-size: 18px;
+	font-weight: bold;
+}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objName,x,newText) { //v3.0
+  var obj = MM_findObj(objName); if (obj) obj.value = newText;
+}
+//-->
+</script>
+<script language="JavaScript"
+type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+
+<form id="form1" name="form1" method="post" action>
+  <table width="1164" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="1164"><dl>
+        <dd align="center">　</dd>
+      </dl>
+      </td>
+    </tr>
+  </table>
+  <table width="897" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="897"><span class="STYLE2"><div align="center"><center><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp; 派车单</span></td>
+    </tr>
+    <tr align="center">
+      <td width="897"><dl>
+        <dd align="right"><input name="y" type="text" id="y" style="width:35px" size="5">年<input
+          name="m" type="text" id="m" style="width:28px" size="5">月<input name="d" type="text"
+          id="d" style="width:28px" size="5">日</dd>
+      </dl>
+      </td>
+    </tr>
+  </table>
+  <div align="center"><center><table width="741" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="198"><span class="style7"><div align="center"><center><p>用车单位</span></td>
+      <td width="288" align="center"><dl>
+        <dd align="center"><input name="textfield" type="text" size="5" /> </dd>
+      </dl>
+      </td>
+      <td width="31" align="center"><span class="style7"><div align="center"><center><p>用车人</span></td>
+      <td colspan="2" align="center" width="128"><dl>
+        <dd align="center"><input name="textfield2" type="text" size="5" /> </dd>
+      </dl>
+      </td>
+      <td width="118" align="center"><span class="style7"><div align="center"><center><p>驾驶员</span></td>
+      <td colspan="4" align="center" width="258"><dl>
+        <dd align="center"><input name="textfield3" type="text" size="15" /> </dd>
+      </dl>
+      </td>
+    </tr>
+    <tr align="center">
+      <td width="198" bgcolor="#FFFF00"><span class="style7"><div align="center"><center><p><strong>到达时间</strong></span></td>
+      <td colspan="4" align="center" width="451"><span class="style7"><div align="center"><center><p>自 
+      <select name="select" id="select" size="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select> 月 <select name="select6" id="select2" size="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select> 日 <select name="select1" id="select1" size="1">
+        <option value="0" selected="selected">AM 00:00</option>
+        <option value="0.5">AM 00:30</option>
+        <option value="1">AM 01:00</option>
+        <option value="1.5">AM 01:30</option>
+        <option value="2">AM 02:00</option>
+        <option value="2.5">AM 02:30</option>
+        <option value="3">AM 03:00</option>
+        <option value="3.5">AM 03:30</option>
+        <option value="4">AM 04:00</option>
+        <option value="4.5">AM 04:30</option>
+        <option value="5">AM 05:00</option>
+        <option value="5.5">AM 05:30</option>
+        <option value="6">AM 06:00</option>
+        <option value="6.5">AM 06:30</option>
+        <option value="7">AM 07:00</option>
+        <option value="7.5">AM 07:30</option>
+        <option value="8">AM 08:00</option>
+        <option value="8.25">AM 08:15</option>
+        <option value="8.5">AM 08:30</option>
+        <option value="8.75">AM 08:45 </option>
+        <option value="9">AM 09:00</option>
+        <option value="9.25">AM 09:15</option>
+        <option value="9.5">AM 09:30</option>
+        <option value="9.75">AM 09:45</option>
+        <option value="10">AM 10:00</option>
+        <option value="10.25">AM 10:15</option>
+        <option value="10.5">AM 10:30</option>
+        <option value="10.75">AM 10:45</option>
+        <option value="11">AM 11:00</option>
+        <option value="11.25">AM 11:15</option>
+        <option value="11.5">AM 11:30</option>
+        <option value="11.75">AM 11:45</option>
+        <option value="12">PM 12:00</option>
+        <option value="12.25">PM 12:15</option>
+        <option value="12.5">PM 12:30</option>
+        <option value="12.75">PM 12:45</option>
+        <option value="13">PM 01:00</option>
+        <option value="13.25">PM 01:15</option>
+        <option value="13.5">PM 01:30</option>
+        <option value="13.75">PM 01:45</option>
+        <option value="14">PM 02:00</option>
+        <option value="14.25">PM 02:15</option>
+        <option value="14.5">PM 02:30</option>
+        <option value="14.75">PM 02:45</option>
+        <option value="15">PM 03:00</option>
+        <option value="15.25">PM 03:15</option>
+        <option value="15.5">PM 03:30</option>
+        <option value="15.75">PM 03:45</option>
+        <option value="16">PM 04:00</option>
+        <option value="16.25">PM 04:15</option>
+        <option value="16.5">PM 04:30</option>
+        <option value="16.75">PM 04:45</option>
+        <option value="17">PM 05:00</option>
+        <option value="17.5">PM 05:30</option>
+        <option value="18">PM 06:00</option>
+        <option value="18.5">PM 06:30</option>
+        <option value="19">PM 07:00</option>
+        <option value="19.5">PM 07:30</option>
+        <option value="20">PM 08:00</option>
+        <option value="20.5">PM 08:30</option>
+        <option value="21">PM 09:00</option>
+        <option value="21.5">PM 09:30</option>
+        <option value="22">PM 10:00</option>
+        <option value="22.5">PM 10:30</option>
+        <option value="23">PM 11:00</option>
+        <option value="23.5">PM 11:30</option>
+      </select> </span></td>
+      <td rowspan="2" align="center" width="118"><span class="style7"><div align="center"><center><p>目的地</span></td>
+      <td colspan="4" rowspan="2" align="center" width="258"><dl>
+        <dd align="center"><input name="textfield32" type="text" size="15" /> </dd>
+      </dl>
+      </td>
+    </tr>
+    <tr align="center">
+      <td width="198"><span class="style7"><div align="center"><center><p>回厂时间</span></td>
+      <td colspan="4" align="center" width="451"><span class="style7"><div align="center"><center><p>至 
+      <select name="select4" id="select3" size="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select> 月 <select name="select5" id="select4" size="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select> 日 <select name="select2" id="select5" size="1">
+        <option value="0" selected="selected">AM 00:00</option>
+        <option value="0.5">AM 00:30</option>
+        <option value="1">AM 01:00</option>
+        <option value="1.5">AM 01:30</option>
+        <option value="2">AM 02:00</option>
+        <option value="2.5">AM 02:30</option>
+        <option value="3">AM 03:00</option>
+        <option value="3.5">AM 03:30</option>
+        <option value="4">AM 04:00</option>
+        <option value="4.5">AM 04:30</option>
+        <option value="5">AM 05:00</option>
+        <option value="5.5">AM 05:30</option>
+        <option value="6">AM 06:00</option>
+        <option value="6.5">AM 06:30</option>
+        <option value="7">AM 07:00</option>
+        <option value="7.5">AM 07:30</option>
+        <option value="8">AM 08:00</option>
+        <option value="8.25">AM 08:15</option>
+        <option value="8.5">AM 08:30</option>
+        <option value="8.75">AM 08:45 </option>
+        <option value="9">AM 09:00</option>
+        <option value="9.25">AM 09:15</option>
+        <option value="9.5">AM 09:30</option>
+        <option value="9.75">AM 09:45</option>
+        <option value="10">AM 10:00</option>
+        <option value="10.25">AM 10:15</option>
+        <option value="10.5">AM 10:30</option>
+        <option value="10.75">AM 10:45</option>
+        <option value="11">AM 11:00</option>
+        <option value="11.25">AM 11:15</option>
+        <option value="11.5">AM 11:30</option>
+        <option value="11.75">AM 11:45</option>
+        <option value="12">PM 12:00</option>
+        <option value="12.25">PM 12:15</option>
+        <option value="12.5">PM 12:30</option>
+        <option value="12.75">PM 12:45</option>
+        <option value="13">PM 01:00</option>
+        <option value="13.25">PM 01:15</option>
+        <option value="13.5">PM 01:30</option>
+        <option value="13.75">PM 01:45</option>
+        <option value="14">PM 02:00</option>
+        <option value="14.25">PM 02:15</option>
+        <option value="14.5">PM 02:30</option>
+        <option value="14.75">PM 02:45</option>
+        <option value="15">PM 03:00</option>
+        <option value="15.25">PM 03:15</option>
+        <option value="15.5">PM 03:30</option>
+        <option value="15.75">PM 03:45</option>
+        <option value="16">PM 04:00</option>
+        <option value="16.25">PM 04:15</option>
+        <option value="16.5">PM 04:30</option>
+        <option value="16.75">PM 04:45</option>
+        <option value="17">PM 05:00</option>
+        <option value="17.5">PM 05:30</option>
+        <option value="18">PM 06:00</option>
+        <option value="18.5">PM 06:30</option>
+        <option value="19">PM 07:00</option>
+        <option value="19.5">PM 07:30</option>
+        <option value="20">PM 08:00</option>
+        <option value="20.5">PM 08:30</option>
+        <option value="21">PM 09:00</option>
+        <option value="21.5">PM 09:30</option>
+        <option value="22">PM 10:00</option>
+        <option value="22.5">PM 10:30</option>
+        <option value="23">PM 11:00</option>
+        <option value="23.5">PM 11:30</option>
+      </select> </span></td>
+    </tr>
+    <tr align="center">
+      <td rowspan="2" width="198"><span class="style7"><div align="center"><center><p>事由</span></td>
+      <td colspan="4" rowspan="2" align="center" width="451"><span class="style7"><dl>
+        <dd align="center"><textarea name="textarea" cols="25" rows="2"></textarea> </span></dd>
+      </dl>
+      </td>
+      <td rowspan="2" align="center" width="118"><span class="style7"><div align="center"><center><p>车型</span></td>
+      <td width="63" height="26" align="center"><span class="style7"><div align="center"><center><p>卡车</span></td>
+      <td width="63" align="center"><span class="style7"><div align="center"><center><p>中巴</span></td>
+      <td width="63" align="center"><span class="style7"><div align="center"><center><p>小车</span></td>
+      <td width="63" align="center"><span class="style7"><div align="center"><center><p>机车</span></td>
+    </tr>
+    <tr align="center">
+      <td height="23" width="63"><span class="style7"><dl>
+        <dd align="center"><input type="checkbox" name="checkbox" value="checkbox" /> </span></dd>
+      </dl>
+      </td>
+      <td width="63"><span class="style7"><dl>
+        <dd align="center"><input type="checkbox" name="checkbox2" value="checkbox" /> </span></dd>
+      </dl>
+      </td>
+      <td width="63"><span class="style7"><dl>
+        <dd align="center"><input type="checkbox" name="checkbox3" value="checkbox" /> </span></dd>
+      </dl>
+      </td>
+      <td width="63"><span class="style7"><dl>
+        <dd align="center"><input type="checkbox" name="checkbox4" value="checkbox" /> </span></dd>
+      </dl>
+      </td>
+    </tr>
+    <tr align="center">
+      <td width="198"><span class="style7"><div align="center"><center><p>携带物品</span></td>
+      <td colspan="2" align="center" width="321"><dl>
+        <dd align="center"><input name="textfield4" type="text" size="15" /> </dd>
+      </dl>
+      </td>
+      <td width="20" align="center">派车人</td>
+      <td width="106" align="center"><input name="textfield5x" type="text" size="8"
+      id="textfield5x" /></td>
+      <td align="center" width="118"><span class="style7"><div align="center"><center><p>随行人数</span></td>
+      <td colspan="4" align="center" width="258"><span class="style7"><dl>
+        <dd align="center"><select id="select6" name="select3" size="1">
+            <option value="0" selected="selected">无</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            <option>32</option>
+            <option>33</option>
+          </select> 人</span></dd>
+      </dl>
+      </td>
+    </tr>
+  </table>
+  </center></div><div align="center"><center><table width="600" border="0" cellspacing="0"
+  cellpadding="0">
+    <tr>
+      <td>　<p class="style11">签核流程：申请人→主管审核→并流1.总务2.保安→经办保安确认返厂时间</p>
+      <p class="style11"><font color="#0000FF">注意:接客户时间为到达目点地时间.厂内就为大门等待时间</font></td>
+    </tr>
+  </table>
+  </center></div>
+</form>
+</body>
+</html>

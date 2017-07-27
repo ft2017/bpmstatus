@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="620" border="1">
+  <tr>
+    <td colspan="6"><div align="center"><img src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" width="492" height="51" /></div></td>
+  </tr>
+  <tr>
+    <td height="36" colspan="6"><div align="center"><strong>表单修改申请</strong></div></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">申请部门：</td>
+    <td width="68" nowrap="nowrap"><form id="form1" name="form1" method="post" action="">
+      <label>         
+            <select name="select">
+              <option>压铸</option>
+              <option>加工</option>
+              <option>烤漆</option>
+              <option>素研</option>
+              <option>生管</option>
+              <option>财务</option>
+              <option>采购</option>
+              <option>资材</option>
+              <option>工程</option>
+              <option>业务</option>
+              <option>其他</option>
+            </select>
+        </label></form>    </td>
+    <td width="75">申请人：</td>
+    <td width="89" nowrap="nowrap"><form id="form2" name="form2" method="post" action="">
+      <label>
+      <input name="textfield" type="text" size="10" maxlength="10" />
+      </label>
+    </form>	</td>
+    <td width="81">日期：</td>
+    <td width="154" nowrap="nowrap"><form id="form3" name="form3" method="post" action="">
+      <label>
+        <input name="textfield2" type="text" size="20" />
+		<script language="JavaScript"> 
+today=new Date(); 
+form3.textfield2.value=today.getFullYear()+'年'+ (today.getMonth()+1)+'月'+ today.getDate()+'日'; 
+
+</script> 
+        </label>
+    </form>	</td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">表单类型：</td>
+    <td colspan="5"><form id="form4" name="form4" method="post" action="">
+      <label>
+        <select name="select2">
+		<option >即时通表单</option>
+		<option >ERP报表</option>
+        </select>
+        </label>
+    </form>    </td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">表单名称：</td>
+    <td colspan="5"><label></label>
+      <form id="form5" name="form5" method="post" action="">
+        <input type="text" name="textfield3" />
+            </form>
+    <label></label></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">描述：</td>
+    <td colspan="5"><form id="form6" name="form6" method="post" action="">
+      <textarea name="textarea" cols="70" rows="5"></textarea>
+        </form>
+      <label></label></td>
+  </tr>
+</table>
+<p class="STYLE1">说明：1&gt;
+         流程：申请人-->部门主管-->资讯-->申请人</p>
+</body>
+</html>

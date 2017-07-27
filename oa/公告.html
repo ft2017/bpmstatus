@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>人事公告</title>
+<style type="text/css">
+<!--
+.style7 {font-size: 12px;"楷体_GB2312";}
+.style9 {
+	font-size: 20px;
+	font-family:"仿宋_2312";
+	font-weight: bold;
+}
+.style10 {color: #999999}
+.style11 {font-weight: bold; color: #FF0000; font-size: 14px; }
+.STYLE12 {font-size: 24px}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+<form action="" method="post" name="form1" id="form1">
+  <table cellspacing="0" cellpadding="0" width="500" border="0">
+    <tbody>
+      <tr>
+        <td align="center"><div align="center" class="style9">
+          <p><img width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /></p>
+          <p class="STYLE12"> 公 告</p>
+          </div>
+          <p><span class="style7">
+            <input name="textarea4" type="text" id="textarea4" value="" size="5" />
+          </span>富管字第<span class="style7">
+            <input name="textarea3" type="text" id="textarea3" value="" size="6" />
+        </span>  号</p></td>
+      </tr>
+      <tr>
+        <td align="middle" bgcolor="#000000"><table cellspacing="1" cellpadding="3" width="600" border="0">
+          <tbody>
+            
+            <tr>
+              <td align="left" bgcolor="#ffffff"><p class="STYLE12">主  旨:
+                <input name="b" type="text" id="b" style="width:170px; height: 20px;" />
+              </p>
+                <textarea id="textarea2" name="textarea2" rows="30" cols="82"></textarea>
+                <p class="STYLE12">&nbsp;特此公告！</p></td>
+                
+            </tr>
+            <tr>
+              <td align="left" bgcolor="#ffffff"><p class="STYLE12">富钛金属科技（昆山）有限公司</p>
+                </td>
+            </tr>
+            <tr>
+              <td align="right" bgcolor="#ffffff"><input name="y" type="text" id="y" style="width:35px">年<input name="m" type="text" id="m" style="width:28px">月<input name="d" type="text" id="d" style="width:28px">日</td>
+            </tr>
+           </tbody>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="right" class="style7"><hr 
+size="1" 
+style="COLOR: #990000; BORDER-TOP-STYLE: dotted; BORDER-RIGHT-STYLE: dotted; BORDER-LEFT-STYLE: dotted; BORDER-BOTTOM-STYLE: dotted" /></td>
+      </tr>
+      <tr>
+        <td class="style7"><span class="style11">※请依规定流程选取签核人員、签核方式：串签。<br />
+签核流程：申请人→总经理</span></td>
+      </tr>
+      <tr>
+        <td align="right" class="style7">GM-C-005-17</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>外出申请单</title>
+<style type="text/css">
+<!--
+.style1 {font-size: 12px}
+.style3 {
+	color: #FF6600;
+	font-size: 12px;
+}
+.style4 {font-size: 20px;
+	font-weight: bold;
+	font-family: "標楷體", "微軟正黑體";
+}
+input {	height: 18px;}
+.style5 {
+	font-size: 14px;
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style>
+
+
+
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+<form action="" method="post" name="form1">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="615" height="30" align="center" bgcolor="#FFFFFF"><span class="style4"><img width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /><br>
+      外出报备单</span></td>
+    </tr>
+    <tr>
+      <td height="30" align="right" bgcolor="#FFFFFF"><span class="style1">
+        <input name="y" type="text" id="y" style="width:35px">
+年
+<input name="m" type="text" id="m" style="width:28px">
+月
+<input name="d" type="text" id="d" style="width:28px">
+日 </span></td>
+    </tr>
+    <tr>
+      <td bgcolor="#000000"><table width="615" border="1" cellpadding="3" cellspacing="1" bordercolor="#000000">
+        <tr align="center" bgcolor="#FFFFFF" class="style1">
+          <td width="70" bgcolor="#FFFFFF">申请人姓名工号</td>
+          <td width="173" align="center"><input name="c10" type="text" id="c10" style="width: 165px; height: 28px;" ></td>
+          <td width="75" align="center">服务单位</td>
+          <td width="268" align="center"><input name="b10" type="text" id="b10" style="width: 250px; height: 28px;" ></td>
+        </tr>
+        <tr align="center" bgcolor="#FFFFFF" class="style1">
+          <td bgcolor="#FFFFFF">外出事由</td>
+          <td align="left"><textarea name="t6" cols="25" rows="2" id="t6" style="width: 170px"></textarea></td>
+          <td align="center">前往地点</td>
+          <td align="center"><input name="e10" type="text" id="e10" style="width: 250px; height: 28px;" ></td>
+        </tr>
+        <tr align="center" bgcolor="#FFFFFF" class="style1">
+          <td rowspan="2" bgcolor="#FFFFFF"><p>预定出厂</p>
+            <p>返厂时间</p></td>
+          <td align="left"><input type="text" name="textfield" onFocus="CalendarWebControl.show(this,true,this.value);"></td>
+          <td rowspan="2" align="center">乘车工具</td>
+          <td rowspan="2" align="center"><input name="radiobutton" type="radio" value="1" checked>
+            自行处理
+            <input name="radiobutton" type="radio" value="2">
+            公车  
+            <input name="radiobutton" type="radio" value="3">
+            摩托   
+            <input name="radiobutton" type="radio" value="4"> 厂车</td>
+        </tr>
+        <tr align="center" bgcolor="#FFFFFF" class="style1">
+          <td align="left"><input type="text" name="textfield2" onFocus="CalendarWebControl.show(this,true,this.value);"></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td><hr 
+size=1 
+style="COLOR: #990000; BORDER-TOP-STYLE: dotted; BORDER-RIGHT-STYLE: dotted; BORDER-LEFT-STYLE: dotted; BORDER-BOTTOM-STYLE: dotted"></td>
+    </tr>
+    <tr>
+      <td><p class="style3">&nbsp;</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="style5"><p class="style1">&nbsp;</p>
+      </td>
+    </tr>
+    <tr align="right">
+      <td class="style1"><FONT face="Times New Roman"> <SPAN lang=EN-US></SPAN></FONT></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

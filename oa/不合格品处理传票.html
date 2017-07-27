@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>不合格品处理传票</title>
+<style type="text/css">
+<!--
+.STYLE1 {	font-size: 18px;
+	font-weight: bold;
+}
+.style7 {font-size: 12px;"楷体_GB2312";}
+.STYLE8 {font-size: 12}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+<form id="form1" name="form1" method="post" action="">
+  <table width="672" cellspacing="1">
+    <tr>
+      <td width="680"><div align="center"><span class="style7"><img width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /></span></div></td>
+    </tr>
+  </table>
+  <table width="680" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="678"><div align="center"><span class="STYLE1">不合格品处理传票</span></div></td>
+    </tr>
+  </table>
+  <table width="672" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="106" class="style7"><span class="STYLE8">申报部门
+        <input name="textfield" type="text" size="5" />
+      </span></td>
+      <td width="71" class="style7"><span class="STYLE8">
+        <input type="checkbox" name="checkbox" value="checkbox" />
+      暂收单</span></td>
+      <td width="132" class="style7"><span class="STYLE8">
+        <input type="checkbox" name="checkbox2" value="checkbox" />
+      不合格品处理单号</span></td>
+      <td width="100" class="style7"><input name="textfield2" type="text" size="12" /></td>
+      <td width="271" class="style7"><div align="right"><span class="STYLE8">日期：<input name="y" type="text" id="y" style="width:35px">年<input name="m" type="text" id="m" style="width:28px">月<input name="d" type="text" id="d" style="width:28px">日</span></div></td>
+    </tr>
+  </table>
+  <table width="670" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+    <tr>
+      <td width="33" class="style7"><span class="STYLE8">代码</span></td>
+      <td width="92" class="style7"><input name="textfield6" type="text" size="10" /></td>
+      <td width="67" class="style7"><span class="STYLE8">品号/品名</span></td>
+      <td width="104" class="style7"><input name="textfield62" type="text" size="10" /></td>
+      <td width="62" class="style7"><span class="STYLE8">加工别</span></td>
+      <td width="163" class="style7"><input name="textfield63" type="text" size="10" /></td>
+      <td width="30" class="style7"><span class="STYLE8">材料</span></td>
+      <td width="103" class="style7"><input name="textfield64" type="text" size="10" /></td>
+    </tr>
+  </table>
+  <table width="670" border="1" cellspacing="0" bordercolor="#000000">
+    <tr>
+      <td width="66" class="style7"><span class="STYLE8">批号</span></td>
+      <td width="121" class="style7"><input name="textfield7" type="text" size="8" /></td>
+      <td width="67" class="style7"><span class="STYLE8">总批量</span></td>
+      <td width="190" class="style7"><span class="STYLE8">
+        <input name="textfield8" type="text" size="6" />
+      KGS
+      <input name="textfield9" type="text" size="6" />
+      PCS</span></td>
+      <td width="68" class="style7"><span class="STYLE8">制造单位</span></td>
+      <td width="132" class="style7"><input name="textfield10" type="text" size="10" /></td>
+    </tr>
+  </table>
+  <table width="670" border="1" cellspacing="0" bordercolor="#000000">
+    <tr>
+      <td width="66" class="style7"><span class="style7">不良比列</span></td>
+      <td width="121" class="style7"><input name="textfield112" type="text" size="8" /></td>
+      <td width="67" class="style7">不良品数量</td>
+      <td width="190" class="style7"><input name="textfield822" type="text" size="6" />
+KGS
+<input name="textfield922" type="text" size="6" />
+PCS</td>
+      <td width="68" bordercolor="#000000" class="style7"><span class="style7">单 重</span></td>
+      <td width="131" class="style7"><span class="style7">
+        <input name="textfield12" type="text" size="8" />
+      克/PC</span></td>
+    </tr>
+  </table>
+  <table width="670" border="1" cellspacing="0" bordercolor="#000000">
+    <tr>
+      <td width="12" class="style7"><div align="center"><span class="style7">NO</span></div></td>
+      <td width="143" class="style7"><div align="center"><span class="style7">不良原因分类</span></div></td>
+      <td width="35" class="style7"><div align="center"><span class="style7">重量</span></div></td>
+      <td width="35" class="style7"><div align="center"><span class="style7">数量</span></div></td>
+      <td width="35" class="style7"><div align="center"><span class="style7">比率%</span></div></td>
+      <td width="143" class="style7"><div align="center"><span class="style7">处理方案</span></div></td>
+      <td width="35" class="style7"><div align="center"><span class="style7">责任单位</span></div></td>
+      <td width="35" class="style7"><div align="center"><span class="style7">主管签名</span></div></td>
+      <td width="159" class="style7"><div align="center"><span class="style7">备 注</span></div></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><textarea name="textarea" cols="18"></textarea></td>
+      <td><input name="textfield13" type="text" size="5" /></td>
+      <td><input name="textfield136" type="text" size="5" /></td>
+      <td><input name="textfield1311" type="text" size="5" /></td>
+      <td><textarea name="textarea6" cols="18"></textarea></td>
+      <td><input name="textfield1316" type="text" size="5" /></td>
+      <td><input name="textfield1321" type="text" size="5" /></td>
+      <td><textarea name="textarea11" cols="10"></textarea></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><textarea name="textarea2" cols="18"></textarea></td>
+      <td><input name="textfield132" type="text" size="5" /></td>
+      <td><input name="textfield137" type="text" size="5" /></td>
+      <td><input name="textfield1312" type="text" size="5" /></td>
+      <td><textarea name="textarea7" cols="18"></textarea></td>
+      <td><input name="textfield1317" type="text" size="5" /></td>
+      <td><input name="textfield1322" type="text" size="5" /></td>
+      <td><textarea name="textarea12" cols="10"></textarea></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><textarea name="textarea3" cols="18"></textarea></td>
+      <td><input name="textfield133" type="text" size="5" /></td>
+      <td><input name="textfield138" type="text" size="5" /></td>
+      <td><input name="textfield1313" type="text" size="5" /></td>
+      <td><textarea name="textarea8" cols="18"></textarea></td>
+      <td><input name="textfield1318" type="text" size="5" /></td>
+      <td><input name="textfield1323" type="text" size="5" /></td>
+      <td><textarea name="textarea13" cols="10"></textarea></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><textarea name="textarea4" cols="18"></textarea></td>
+      <td><input name="textfield134" type="text" size="5" /></td>
+      <td><input name="textfield139" type="text" size="5" /></td>
+      <td><input name="textfield1314" type="text" size="5" /></td>
+      <td><textarea name="textarea9" cols="18"></textarea></td>
+      <td><input name="textfield1319" type="text" size="5" /></td>
+      <td><input name="textfield1324" type="text" size="5" /></td>
+      <td><textarea name="textarea14" cols="10"></textarea></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><textarea name="textarea5" cols="18"></textarea></td>
+      <td><input name="textfield135" type="text" size="5" /></td>
+      <td><input name="textfield1310" type="text" size="5" /></td>
+      <td><input name="textfield1315" type="text" size="5" /></td>
+      <td><textarea name="textarea10" cols="18"></textarea></td>
+      <td><input name="textfield1320" type="text" size="5" /></td>
+      <td><input name="textfield1325" type="text" size="5" /></td>
+      <td><textarea name="textarea15" cols="10"></textarea></td>
+    </tr>
+  </table>
+  <table width="670" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><div align="right" class="style7">制单：
+          <input name="textfield14" type="text" size="8" />
+      </div></td>
+    </tr>
+  </table>
+  <p class="STYLE8">流程:经办人→品保主管→生管→副总及相关负责人签核→财务/资材</p>
+  <p class="STYLE8">&nbsp;&nbsp;&nbsp; 制单→部门主管→品管(判定)→品保QE→责任單位1(必要时)→责任單位2(必要时)→生管(超1%比例时)→核准主管(贾经理)(超1%比例)</p>
+  </form>
+</body>
+</html>

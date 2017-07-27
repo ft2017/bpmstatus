@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>出差报告书</title>
+<style type="text/css">
+<!--
+.style7 {font-size: 12px;"楷体_GB2312";}
+.style9 {
+	font-size: 20px;
+	font-family:"仿宋_2312";
+	font-weight: bold;
+}
+.style10 {color: #999999}
+.style11 {font-weight: bold; color: #FF0000; font-size: 14px; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript"> 
+<!--
+ 
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+ 
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+ 
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+<form action="" method="post" name="form1" >
+  <table cellspacing="0" cellpadding="0" width="600" border="0">
+    <tbody>
+      <tr>
+        <td width="600" align="middle"><div align="center" class="style9">
+          <p><img width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" />
+          <br />
+            <span class="style9">
+            出 差 报 告 书</span></p> <input name="y" type="text" id="y" style="width:35px">
+年
+<input name="m" type="text" id="m" style="width:28px">
+月
+<input name="d" type="text" id="d" style="width:28px">
+日
+        
+            
+        </div></td>
+      </tr>
+      <tr>
+                <td align="center" bgcolor="#000000">
+      <table width="600" border="0" cellpadding="3" cellspacing="1" style="width: 600px">
+        <tr bgcolor="#FFFFFF" class="style1">
+          <td width="40" align="center"><strong>姓名</strong></td>
+          <td colspan="2"><input name="a1" type="text" id="a1" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="63" align="center"><strong>部门</strong></td>
+          <td colspan="2"><input name="a2" type="text" id="a2" size="10" style="width: 100px; height: 20px;" ></td>
+          <td width="51" align="center"><strong>职位</strong></td>
+          <td colspan="4" align="center"><input name="a3" type="text" id="a3" size="10" style="width: 180px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td align="center"><strong>出差目的</strong></td>
+          <td colspan="3"><input name="a4" type="text" id="a4" size="10" style="width: 120px; height: 20px;" ></td>
+          <td width="50" align="center"><strong>国家地区</strong></td>
+          <td colspan="6"><input name="a5" type="text" id="a5" size="10" style="width: 300px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><strong>出差时间</strong></td>
+          <td colspan="10" align="center"><select name="yy1" id="yy1">
+            <option value="9">2009</option>
+            <option value="10">2010</option>
+            <option value="11">2011</option>
+            <option value="12">2012</option>
+          </select>年<select name="mm1" id="mm1">
+  <option value="1" selected="selected">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>月<select name="dd1" id="dd1">
+  <option value="1" selected="selected">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>日起至<select name="yy2" id="yy3">
+  <option value="9">2009</option>
+  <option value="10">2010</option>
+  <option value="11">2011</option>
+  <option value="12">2012</option>
+</select>年<select name="mm2" id="mm3">
+  <option value="1" selected="selected">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>月<select name="dd2" id="dd3">
+  <option value="1" selected="selected">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>日<strong>合 计</strong><strong>
+            <input name="day" type="text" id="day" style="width:28px" onFocus="MM_setday('yy1','mm1','dd1','yy2','mm2','dd2','day')">
+            天</strong></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><strong>日期</strong></td>
+          <td width="71" align="center"><strong>国家</strong></td>
+          <td colspan="2" align="center"><strong>摘 要</strong></td>
+          <td width="50" align="center"><strong>膳杂费</strong></td>
+          <td width="51" align="center"><strong>宿费</strong></td>
+          <td align="center"><strong>交通费</strong></td>
+          <td width="51" align="center"><strong>交际费</strong></td>
+          <td width="50" align="center"><strong>其他费用</strong></td>
+          <td width="51" align="center"><strong>进项税额</strong></td>
+          <td width="49" align="center"><strong>合 计</strong></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a11" type="text" id="a11" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b11" type="text" id="b11" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c11" type="text" id="c11" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d11" type="text" id="d11" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e11" type="text" id="e11" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f11" type="text" id="f11" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g11" type="text" id="g11" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h11" type="text" id="h11" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i11" type="text" id="i11" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j11" type="text" id="j11" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a12" type="text" id="a12" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b12" type="text" id="b12" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c12" type="text" id="c12" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d12" type="text" id="d12" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e12" type="text" id="e12" size="10" style="width: 50px; height: 20px;" /></td>
+          <td><input name="f12" type="text" id="f12" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g12" type="text" id="g12" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h12" type="text" id="h12" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i12" type="text" id="i12" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j12" type="text" id="j12" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a13" type="text" id="a13" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b13" type="text" id="b13" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c13" type="text" id="c13" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d13" type="text" id="d13" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e13" type="text" id="e13" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f13" type="text" id="f13" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g13" type="text" id="g13" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h13" type="text" id="h13" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i13" type="text" id="i13" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j13" type="text" id="j13" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a14" type="text" id="a14" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b14" type="text" id="b14" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c14" type="text" id="c14" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d14" type="text" id="d14" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e14" type="text" id="e14" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f14" type="text" id="f14" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g14" type="text" id="g14" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h14" type="text" id="h14" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i14" type="text" id="i14" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j14" type="text" id="j14" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a15" type="text" id="a15" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b15" type="text" id="b15" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c15" type="text" id="c15" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d15" type="text" id="d15" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e15" type="text" id="e15" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f15" type="text" id="f15" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g15" type="text" id="g15" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h15" type="text" id="h15" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i15" type="text" id="i15" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j15" type="text" id="j15" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a16" type="text" id="a16" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b16" type="text" id="b16" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c16" type="text" id="c16" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d16" type="text" id="d16" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e16" type="text" id="e16" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f16" type="text" id="f16" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g16" type="text" id="g16" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h16" type="text" id="h16" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i16" type="text" id="i16" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j16" type="text" id="j16" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a17" type="text" id="a17" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b17" type="text" id="b17" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c17" type="text" id="c17" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d17" type="text" id="d17" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e17" type="text" id="e17" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f17" type="text" id="f17" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g17" type="text" id="g17" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h17" type="text" id="h17" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i17" type="text" id="i17" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j17" type="text" id="j17" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a18" type="text" id="a18" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b18" type="text" id="b18" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c18" type="text" id="c18" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d18" type="text" id="d18" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e18" type="text" id="e18" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f18" type="text" id="f18" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g18" type="text" id="g18" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h18" type="text" id="h18" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i18" type="text" id="i18" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j18" type="text" id="j18" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a19" type="text" id="a19" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b19" type="text" id="b19" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c19" type="text" id="c19" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d19" type="text" id="d19" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e19" type="text" id="e19" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f19" type="text" id="f19" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g19" type="text" id="g19" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h19" type="text" id="g19" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i19" type="text" id="i19" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j19" type="text" id="j19" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td><input name="a20" type="text" id="a20" size="10" style="width: 35px; height: 20px;" ></td>
+          <td><input name="b20" type="text" id="b20" size="10" style="width: 60px; height: 20px;" ></td>
+          <td colspan="2"><input name="c20" type="text" id="c20" size="10" style="width: 60px; height: 20px;" ></td>
+          <td width="50"><input name="d20" type="text" id="d20" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="e20" type="text" id="e20" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f20" type="text" id="f20" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="g20" type="text" id="g20" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="h20" type="text" id="h20" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="i20" type="text" id="i20" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="j20" type="text" id="j20" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td rowspan="6" align="center" valign="middle"><p class="style9"><strong>说</strong></p>
+            <p class="style9"><strong>明</strong></p></td>
+          <td colspan="2" rowspan="6"><textarea name="bs1" rows="10" id="bs1" style="width: 70px"></textarea></td>
+          <td width="63" align="center"><strong> 小计 (外币)</strong></td>
+          <td width="50"><input name="a21" type="text" id="a21" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="b21" type="text" id="b21" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="c21" type="text" id="c21" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="d21" type="text" id="d21" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="e21" type="text" id="e21" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f21" type="text" id="f21" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="g21" type="text" id="g21" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td width="63" align="center"><strong>汇率</strong></td>
+          <td width="50" align="center"><strong>USD</strong></td>
+          <td>&nbsp;</td>
+          <td align="center"><strong>HKD</strong></td>
+          <td width="51">&nbsp;</td>
+          <td width="50" align="center"><strong>NTS</strong></td>
+          <td>&nbsp;</td>
+          <td align="center"><strong>总计</strong></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+          <td width="63" align="center"><strong>商务卡</strong></td>
+          <td width="50"><input name="a22" type="text" id="aa221" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="b22" type="text" id="b22" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="c22" type="text" id="c22" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="51"><input name="d22" type="text" id="d22" size="10" style="width: 50px; height: 20px;" ></td>
+          <td width="50"><input name="e22" type="text" id="e22" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="f22" type="text" id="f22" size="10" style="width: 50px; height: 20px;" ></td>
+          <td><input name="g22" type="text" id="g22" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+            <td width="63" align="center"><strong>换算人民币</strong></td>
+            <td width="50"><input name="a23" type="text" id="a23" size="10" style="width: 50px; height: 20px;" ></td>
+            <td><input name="b23" type="text" id="b23" size="10" style="width: 50px; height: 20px;" ></td>
+            <td><input name="c23" type="text" id="c23" size="10" style="width: 50px; height: 20px;" ></td>
+            <td><input name="d23" type="text" id="d23" size="10" style="width: 50px; height: 20px;" ></td>
+            <td><input name="e23" type="text" id="e23" size="10" style="width: 50px; height: 20px;" ></td>
+            <td align="center"><input name="f23" type="text" id="f23" size="10" style="width: 50px; height: 20px;" ></td>
+            <td align="center"><input name="g23" type="text" id="g23" size="10" style="width: 40px; height: 20px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+            <td width="63" rowspan="2" align="center" valign="middle"><strong>预计销帐</strong></td>
+            <td colspan="5" rowspan="2" align="center"><select name="yy1" id="yy1">
+            <option value="97">2008</option>
+            <option value="98" selected>2009</option>
+            <option value="99">2010</option>
+            <option value="100">2011</option>
+            <option value="101">2012</option>
+            <option value="102">2013</option>
+                    </select>
+年<select name="mm1" id="mm1">
+  <option value="1" selected>1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>月<select name="dd1" id="dd1" class="style14">
+  <option value="1" selected>1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>日</td>
+            <td align="center" class="style7">暂借金额</td>
+            <td><input name="a24" type="text" id="a24" size="10" style="width: 40px; height: 13px;" ></td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="style1">
+            <td height="23" align="center" class="style7">实发金额</td>
+            <td><input name="b24" type="text" id="b24" size="10" style="width: 40px; height: 13px;" ></td>
+          </tr>
+        </table></td>
+     </tr>
+      <tr>
+        <td align="right" class="style7"><hr 
+size="1" 
+style="COLOR: #990000; BORDER-TOP-STYLE: dotted; BORDER-RIGHT-STYLE: dotted; BORDER-LEFT-STYLE: dotted; BORDER-BOTTOM-STYLE: dotted" /></td></tr>
+<tr>
+        <td class="style7"><span class="style11"><strong>※请依规定流程选取签核人員、签核方式：串签。<br />
+*签核流程：申请人&rarr;     部门主管审核&rarr;     总经理核准&rarr;     转交人事单位做出勤/出差记录&rarr;     财务单位报销</strong></span></td>
+      </tr>
+        
+      <tr>
+        <td align="right" class="style7">GM-C-005-08</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</body>
+</html>

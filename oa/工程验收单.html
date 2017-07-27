@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>维修保养申请单</title>
+<style type="text/css">
+<!--
+.STYLE6 {
+	font-family: "华文楷体";
+	font-size: 20px;
+	font-weight: bold;
+}
+.STYLE7 {
+	font-family: "华文楷体";
+	font-size: 14px;
+}
+.STYLE8 {font-family: "华文楷体"}
+.STYLE9 {font-family: "华文楷体"; font-weight: bold; }
+.STYLE12 {font-size: 12px}
+.STYLE13 {font-size: 12}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+
+<form id="form1" name="form1" method="post" action>
+  <table width="600" height="70" cellspacing="1">
+    <tr>
+      <!--webbot bot="HTMLMarkup" startspan TAG="XBOT" --><<td align="middle"><!--webbot bot="HTMLMarkup" endspan
+      -->
+
+    </tr>
+    <tr>
+      <td height="25" bgcolor="#FFFFFF"><span class="STYLE6"><div align="left"><p></span><img
+      width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /></td>
+    </tr>
+  </table>
+  <table width="600" cellspacing="1" bgcolor="#000033">
+    <tr>
+      <td height="52" align="center" bgcolor="#FFFFFF"><table width="600" border="1"
+      cellspacing="1" bordercolor="#000000" bgcolor="#000033" height="562">
+        <tr>
+          <td width="66" height="43" align="center" bgcolor="#FFFFFF" rowspan="2">工程名称</td>
+          <td width="90" height="43" bgcolor="#FFFFFF" rowspan="2" align="center"><div
+          align="center"><center><p><input type="text" name="T1" size="15"></td>
+          <td width="77" height="22" align="center" bgcolor="#FFFFFF">合同号</td>
+          <td width="77" height="22" align="center" bgcolor="#FFFFFF" colspan="2"><div
+          align="center"><center><p><input type="text" name="T5" size="15"></td>
+        </tr>
+        <tr align="center">
+          <td width="77" height="21" align="center" bgcolor="#FFFFFF">工程编号</td>
+          <td width="77" height="21" align="center" bgcolor="#FFFFFF" colspan="2"><div
+          align="center"><center><p><input type="text" name="T6" size="15"></td>
+        </tr>
+        <tr align="center">
+          <td width="66" height="42" align="center" bgcolor="#FFFFFF">开工日期</td>
+          <td width="90" height="42" bgcolor="#FFFFFF" align="center"><div align="center"><center><p><input
+          type="text" name="T2" size="15"></td>
+          <td width="77" height="42" align="center" bgcolor="#FFFFFF">完工日期</td>
+          <td width="77" height="42" align="center" bgcolor="#FFFFFF" colspan="2"><div
+          align="center"><center><p><input type="text" name="T7" size="15"></td>
+        </tr>
+        <tr align="center">
+          <td width="66" height="42" align="center" bgcolor="#FFFFFF">施工单位</td>
+          <td width="90" height="42" bgcolor="#FFFFFF" align="center"><input type="text" name="T3"
+          size="15"></td>
+          <td width="77" height="42" align="center" bgcolor="#FFFFFF">施工联系人</td>
+          <td width="77" height="42" align="center" bgcolor="#FFFFFF" colspan="2"><div
+          align="center"><center><p><input type="text" name="T8" size="15"></td>
+        </tr>
+        <tr align="center">
+          <td width="66" height="41" align="center" bgcolor="#FFFFFF">验收日期</td>
+          <td width="90" height="41" bgcolor="#FFFFFF" align="center"><input type="text" name="T4"
+          size="15"></td>
+          <td width="77" height="41" align="center" bgcolor="#FFFFFF">延期天数</td>
+          <td width="77" height="41" align="center" bgcolor="#FFFFFF" colspan="2"><div
+          align="center"><center><p><input type="text" name="T9" size="15"> </td>
+        </tr>
+        <tr align="center">
+          <td width="84" height="135" align="center" bgcolor="#FFFFFF" rowspan="4">工程项目/造价</td>
+          <td width="198" height="34" align="center" bgcolor="#FFFFFF">工程项目</td>
+          <td width="97" height="34" align="center" bgcolor="#FFFFFF">单价</td>
+          <td width="99" height="34" align="center" bgcolor="#FFFFFF">合计</td>
+          <td width="92" height="34" align="center" bgcolor="#FFFFFF">备注</td>
+        </tr>
+        <tr align="center">
+          <td width="198" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T10"
+          size="20"></td>
+          <td width="97" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T13"
+          size="5"></td>
+          <td width="99" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T16"
+          size="5"></td>
+          <td width="92" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T19"
+          size="10"></td>
+        </tr>
+        <tr align="center">
+          <td width="198" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T11"
+          size="20"></td>
+          <td width="97" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T14"
+          size="5"></td>
+          <td width="99" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T17"
+          size="5"></td>
+          <td width="92" height="34" align="center" bgcolor="#FFFFFF"><input type="text" name="T20"
+          size="10"></td>
+        </tr>
+        <tr align="center">
+          <td width="198" height="33" align="center" bgcolor="#FFFFFF"><input type="text" name="T12"
+          size="20"></td>
+          <td width="97" height="33" align="center" bgcolor="#FFFFFF"><input type="text" name="T15"
+          size="5"></td>
+          <td width="99" height="33" align="center" bgcolor="#FFFFFF"><input type="text" name="T18"
+          size="5"></td>
+          <td width="92" height="33" align="center" bgcolor="#FFFFFF"><input type="text" name="T21"
+          size="10"></td>
+        </tr>
+        <tr align="center">
+          <td width="73" height="53" align="center" bgcolor="#FFFFFF">设计指标</td>
+          <td width="515" height="53" align="center" bgcolor="#FFFFFF" colspan="4"><input
+          type="text" name="T22" size="40"></td>
+        </tr>
+        <tr align="center">
+          <td width="73" height="53" align="center" bgcolor="#FFFFFF">质量指标</td>
+          <td width="515" height="53" align="center" bgcolor="#FFFFFF" colspan="4"><input
+          type="text" name="T23" size="40"></td>
+        </tr>
+        <tr align="center">
+          <td width="73" height="53" align="center" bgcolor="#FFFFFF">施工经过</td>
+          <td width="515" height="53" align="center" bgcolor="#FFFFFF" colspan="4"><input
+          type="text" name="T24" size="40"></td>
+        </tr>
+        <tr align="center">
+          <td width="73" height="41" align="center" bgcolor="#FFFFFF">缺陷处理</td>
+          <td width="515" height="41" align="center" bgcolor="#FFFFFF" colspan="4"><input
+          type="text" name="T25" size="40"></td>
+        </tr>
+        <tr align="center">
+          <td width="73" height="53" align="center" bgcolor="#FFFFFF">验收结论</td>
+          <td width="515" height="53" align="center" bgcolor="#FFFFFF" colspan="4"><big><big><input
+          type="radio" value="V1" checked name="R1">合格，可通过 </big></big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <big><big><input type="radio" name="R1" value="V2"> 不合格</big></big></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

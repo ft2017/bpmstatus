@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>维修保养申请单</title>
+<style type="text/css">
+<!--
+.STYLE6 {
+	font-family: "华文楷体";
+	font-size: 20px;
+	font-weight: bold;
+}
+.STYLE7 {
+	font-family: "华文楷体";
+	font-size: 14px;
+}
+.STYLE8 {font-family: "华文楷体"}
+.STYLE9 {font-family: "华文楷体"; font-weight: bold; }
+.STYLE12 {font-size: 12px}
+.STYLE13 {font-size: 12}
+-->
+</style>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+<form id="form1" name="form1" method="post" action="">
+  <table width="600" height="70" cellspacing="1">
+    <tr>
+      <<td align="middle"><div align="center" class="style9">
+          <p><img width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /></p></td>
+    </tr>
+    <tr>
+      <td height="25" colspan="10" bgcolor="#FFFFFF"><div align="center"><span class="STYLE6">维修保养申请单</span></div></td>
+    </tr>
+    <tr>
+      <td> 
+          <p><span class="STYLE12">请修单位:
+          <input name="t" type="text1" size="7" />
+          请修车号：
+          <input name="t2" type="text2" size="7" /> 
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 故障发生时间:
+         <input name="y" type="text" id="y" style="width:35px">年<input name="m" type="text" id="m" style="width:28px">月<input name="d" type="text" id="d" style="width:28px">日
+          </p></td></tr>
+  </table>
+  <table width="600" cellspacing="1" bgcolor="#000033"><tr><td height="52" align="center" bgcolor="#FFFFFF"><table width="600" border="1" cellspacing="1" bordercolor="#000000" bgcolor="#000033">
+    <tr>
+      <td width="109" height="53" align="center" bgcolor="#FFFFFF"><strong>报修项目</strong></td>
+      <td width="137" bgcolor="#FFFFFF"><input name="t3" type="text" size="18" /></td>
+      <td width="64" align="center" bgcolor="#FFFFFF"><strong>评估故障原因</strong></td>
+      <td colspan="4" bgcolor="#FFFFFF"><textarea name="t4" cols="23" rows="3" id="t"></textarea></td>
+    </tr>
+    <tr>
+      <td height="52" align="center" bgcolor="#FFFFFF"><p align="center" class="STYLE9">预估价格</p></td>
+      <td height="52" align="left" bgcolor="#FFFFFF">
+        <input name="t5" type="text" size="18" /></td>
+      <td height="52" align="center" bgcolor="#FFFFFF"><strong>厂家报价</strong></td>
+      <td height="52" colspan="2" bgcolor="#FFFFFF"><input name="t7" type="text" size="9" /></td>
+      <td width="60" height="52" align="center" bgcolor="#FFFFFF"><strong>最终商定价格</strong></td>
+      <td width="129" height="52" bgcolor="#FFFFFF"><input name="t6" type="text" size="15" /></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#FFFFFF"><p align="center" class="STYLE8">&nbsp;</p>
+          <p align="center" class="STYLE8">&nbsp;</p>
+        <p><strong>维修说明</strong></p>
+        <p align="right">&nbsp;</p></td>
+      <td colspan="6" align="right" bgcolor="#FFFFFF"><textarea name="t11" cols="42" rows="8" id="t11"></textarea>
+      <span class="STYLE12">报修人</span>：
+          <input name="t8" type="text" size="8" /></td>
+    </tr>
+  </table>    <strong></strong></td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>

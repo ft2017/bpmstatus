@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>人事异动表</title>
+<style type="text/css">
+<!--
+.STYLE6 {
+	font-family: "华文楷体";
+	font-size: 20px;
+}
+.STYLE7 {
+	font-family: "华文楷体";
+	font-size: 14px;
+}
+.STYLE12 {font-size: 12px}
+.STYLE13 {font-family: "华文楷体"; font-weight: bold; font-size: 12px; }
+.style4 {font-size: 20px;
+	font-weight: bold;
+	font-family: "標楷體", "微軟正黑體";
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+
+<form id="form1" name="form1" method="post" action>
+  <table width="600" height="70" cellspacing="1">
+    <tr>
+      <!--webbot bot="HTMLMarkup" startspan TAG="XBOT" --><<td align="middle"><!--webbot bot="HTMLMarkup" endspan
+      -->
+<td><div align="center" class="style9"><div align="center"><center><p><span
+      class="style4"><img width="491" height="47"
+      src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /></span></p>
+      </center></div></div></td>
+    </tr>
+  </table>
+  <table width="600" cellspacing="1" bgcolor="#000033">
+    <tr>
+      <td width="63" align="center" bgcolor="#FFFFFF"><table width="600" border="1"
+      cellspacing="1" bordercolor="#000000" bgcolor="#000033">
+        <tr>
+          <td height="25" colspan="12" bgcolor="#FFFFFF"><span class="STYLE6"><div align="center"><center><p>人事异动单</span></td>
+        </tr>
+        <tr align="center">
+          <td colspan="12" bgcolor="#FFFFFF"><span class="STYLE7"><div align="right"><p>申请日期：<input
+          name="y" type="text" id="y" style="width:35px" size="20">年<input name="m" type="text"
+          id="m" style="width:28px" size="20">月<input name="d" type="text" id="d"
+          style="width:28px" size="20">日 </span></td>
+        </tr>
+        <tr align="center">
+          <td width="55" rowspan="2" bgcolor="#FFFFFF"><div align="center"><center><p
+          class="STYLE13">异动种类请选择</td>
+          <td height="18" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>调职</strong></span></td>
+          <td width="49" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>升迁</strong></span></td>
+          <td colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>调薪</strong></span></td>
+          <td colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>复职</strong></span></td>
+          <td colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>留停</strong></span></td>
+          <td colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>退职/解职</strong></span></td>
+        </tr>
+        <tr align="center">
+          <td height="22" colspan="2" align="center" bgcolor="#FFFFFF"><input name="r1" type="radio"
+          value="1" /></td>
+          <td height="22" align="center" bgcolor="#FFFFFF"><input name="r1" type="radio" value="2" /></td>
+          <td height="22" colspan="2" align="center" bgcolor="#FFFFFF"><input name="r1" type="radio"
+          value="3" /></td>
+          <td height="22" colspan="2" align="center" bgcolor="#FFFFFF"><input name="r1" type="radio"
+          value="4" /></td>
+          <td height="22" colspan="2" align="center" bgcolor="#FFFFFF"><input name="r1" type="radio"
+          value="5" /></td>
+          <td height="22" colspan="2" align="center" bgcolor="#FFFFFF"><input name="r1" type="radio"
+          value="6" /></td>
+        </tr>
+        <tr align="center">
+          <td width="55" height="20" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>姓名</strong></span></td>
+          <td height="20" colspan="2" bgcolor="#FFFFFF"><input name="t" type="text" size="6" /></td>
+          <td height="20" align="center" bgcolor="#FFFFFF"><span class="STYLE12">到职日期</span></td>
+          <td height="20" colspan="4" bgcolor="#FFFFFF"><select name="yy2" id="yy2" size="1">
+            <option value="99" selected>2010</option>
+            <option value="100">2011</option>
+            <option value="101">2012</option>
+            <option value="102">2013</option>
+			 <option value="104">2014</option>
+			  <option value="105">2015</option>
+			   <option value="106">2016</option>
+			    <option value="107">2017</option>
+			
+			
+          </select><span class="STYLE12">年</span> <select name="mm" id="mm" size="1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select><span class="STYLE12">月</span> <select name="dd" id="dd" size="1">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select><span class="STYLE12">日</span></td>
+          <td height="20" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>工号</strong></span></td>
+          <td height="20" colspan="2" bgcolor="#FFFFFF"><input name="t3" type="text" size="10" /></td>
+        </tr>
+        <tr align="center">
+          <td width="55" height="26" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>薪别</strong></span></td>
+          <td height="26" colspan="3" bgcolor="#FFFFFF"><span class="STYLE12"><input name="a1"
+          type="radio" value="1" />直接<input name="a1" type="radio" value="2" />间接<input
+          name="a1" type="radio" value="3" />职员</span></td>
+          <td height="26" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>最高学历</strong></span></td>
+          <td height="26" colspan="2" bgcolor="#FFFFFF"><input name="t5" type="text" size="10" /></td>
+          <td height="26" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>年龄</strong></span></td>
+          <td height="26" colspan="2" bgcolor="#FFFFFF"><input name="t6" type="text" size="4" /> <span
+          class="STYLE12">岁</span></td>
+        </tr>
+        <tr align="center">
+          <td height="49" rowspan="2" bgcolor="#FFFFFF"><div align="center"><center><p
+          class="STYLE13">原任</td>
+          <td height="24" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>单位</strong></span></td>
+          <td height="24" colspan="3" bgcolor="#FFFFFF" align="center"><input name="t10" type="text"
+          size="20" /></td>
+          <td height="24" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>新任单位</strong></span></td>
+          <td height="24" colspan="4" bgcolor="#FFFFFF" align="center"><input name="t7" type="text"
+          size="20" /></td>
+        </tr>
+        <tr align="center">
+          <td height="24" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>职（位）称</strong></span></td>
+          <td height="24" colspan="3" bgcolor="#FFFFFF"><input name="t9" type="text" size="20" /></td>
+          <td height="24" colspan="2" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>职（位）称</strong></span></td>
+          <td height="24" colspan="4" bgcolor="#FFFFFF"><input name="t8" type="text" size="20" /></td>
+        </tr>
+        <tr align="center">
+          <td height="143" bgcolor="#FFFFFF"><div align="center"><center><p class="STYLE13">申请理由说明</td>
+          <td height="143" colspan="11" bgcolor="#FFFFFF" align="center"><textarea name="t11"
+          cols="70" rows="8" id="t11"></textarea> </td>
+        </tr>
+        <tr align="center">
+          <td width="55" height="30" bgcolor="#FFFFFF"><span class="STYLE12"><strong>薪资明目</strong></span></td>
+          <td width="46" height="30" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>职等</strong></span></td>
+          <td width="39" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>底薪</strong></span></td>
+          <td height="30" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>主管津贴</strong></span></td>
+          <td width="51" height="30" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>全勤奖金</strong></span></td>
+          <td width="52" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>职务加给</strong></span></td>
+          <td width="53" height="30" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>伙食津贴</strong></span></td>
+          <td width="45" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>特别补助</strong></span></td>
+          <td width="43" height="30" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>津贴</strong></span></td>
+          <td width="42" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>津贴</strong></span></td>
+          <td width="43" height="30" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>津贴</strong></span></td>
+          <td width="43" bgcolor="#FFFFFF"><span class="STYLE12"><strong>全薪</strong></span></td>
+        </tr>
+        <tr align="center">
+          <td width="55" height="26" bgcolor="#FFFFFF"><span class="STYLE12"><strong>原领薪资</strong></span></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t12" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t14" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t16" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t18" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t20" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t22" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t24" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t26" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t28" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t30" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t32" type="text" size="4" /></td>
+        </tr>
+        <tr align="center">
+          <td width="55" height="26" align="center" bgcolor="#FFFFFF"><span class="STYLE12"><strong>拟调整之薪资</strong></span></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t13" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t15" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t17" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t19" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t21" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t23" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t25" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t27" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t29" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t31" type="text" size="4" /></td>
+          <td height="26" bgcolor="#FFFFFF"><input name="t33" type="text" size="4" /></td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<p align="left"><strong> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QWX04D0001-02 
+1.0</strong></p>
+</body>
+</html>

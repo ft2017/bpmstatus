@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>供应商分级考核检查表</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-family: "华文楷体";
+	font-size: 22px;
+	font-weight: bold;
+}
+.STYLE11 {
+	font-size: 16px;
+	color: #FF0000;
+	font-weight: bold;
+}
+.style7 {font-size: 12px;"楷体_GB2312";}
+.STYLE12 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.STYLE13 {
+	font-size: 14px;
+	font-weight: bold;
+}
+-->
+</style>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+<form id="form1" name="form1" method="post" action="">
+  <table width="600" height="70" cellspacing="1">
+    <tr>
+      <td align="middle"><div align="center" class="style9">
+          <p><img width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /></p></td>
+    </tr>
+  </table>
+  <table width="600" cellspacing="1">
+    <tr>
+      <td width="591"><div align="center"><span class="STYLE1">供应商分级考核检查表</span></div></td>
+    </tr>
+    <tr>
+      <td><p>厂商名称:<span class="style7">
+        <input name="textarea8" type="text" id="textarea8" value="" size="10" />
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期:年
+      <input name="y" type="text" id="y" style="width:35px" />
+      <input name="m" type="text" id="m" style="width:28px">月<input name="d" type="text" id="d" style="width:28px">日</p> </td>
+     </tr>
+  </table>
+  <table width="600" cellspacing="1" bgcolor="#000033">
+    <tr>
+      <td width="30" height="19" align="center" bgcolor="#FFFFFF"><strong>NO</strong></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="STYLE12">评审标准</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="STYLE12">评分</span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="STYLE12">不符合事实描述</span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><strong>一</strong></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="STYLE13">工程技术（50分）</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+      <td width="293" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">1</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">针对图面和技术要求，理解及事先问题反馈问题的能力(12分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">2</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">生产设备是否能满足工艺要求(10分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield2" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea2" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">3</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">检测设备是否满足产品品质控制的要求，和提供报告的准确度和完整性(10分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield3" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea3" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">4</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">信息反馈、问题改善的及时性和改善问题的能力(6分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield4" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea4" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">5</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">夹治具、刀具、检具的合理性及有效性(6分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield5" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea5" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">6</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">技术资料是否完整（作业指导书、检验指导书、各种记录等）(4分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield6" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea6" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">7</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">生产岗位的人员是否都经过培训合格后才上岗(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield7" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea7" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><strong>二</strong></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="STYLE13">品质控制能力(30分）</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+      <td width="293" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">1</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">是否利用数据来推动质量管理体系(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield8" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea9" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">2</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">是否有进料、制程、出货控制的过程(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield9" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea10" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">3</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">是否有对不合格品控制的过程(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield10" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea11" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">4</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">现场使用文件是否受控且为最新版本(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield11" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea12" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">5</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">作业指导书是否在整个生产过程易于得到并被执行(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield12" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea13" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">6</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">生产各环节质量记录是否均保存完整(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield13" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea14" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">7</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">现场物料状态是否分类且有明确标示(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield14" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea15" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">8</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">生产过程是否能有效防止产品碰/划伤(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield15" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea16" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">9</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">交货品质（14分）</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield16" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea17" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" bgcolor="#FFFFFF"><p>&nbsp;&nbsp;&nbsp;&nbsp; <span class="style7">本月进料合格批数</span></P>
+      <p class="style7">交货品质得分=————————*14</P>
+      <p class="style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本月进料总批数</P></td>
+      <td align="left" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield17" type="text" size="5" />
+      </span></td>
+      <td align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea18" cols="38" rows="5"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><strong>三</strong></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="STYLE13">交期控制能力（10分）</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+      <td width="293" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">1</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">公司生产过程是否制定生产计划并严格执行(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield18" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea19" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">2</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">可能会影响客户交期时是否提前取得客户确认(2分)</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield19" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea20" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">3</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">实际交期控制（6分）</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield20" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea21" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" bgcolor="#FFFFFF"><span class="style7"></span><span class="style7"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按期交验总数量</P>
+      <p class="style7">实际交期得分=————————*6</P>
+      <p class="style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期内订单总数量</P></span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield21" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea22" cols="38" rows="5"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><strong>四</strong></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="STYLE13">价格水平（5分）</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+      <td width="293" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF">1</td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">是否能全力配合客户降低成本</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield22" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea23" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><strong>五</strong></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="STYLE13">客户服务（每项1分）</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+      <td width="293" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">1</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">是否有客户投诉记录和持续改进计划和纠正预防</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield24" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea24" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">2</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">是否有客户投诉记录和持续改进计划</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield25" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea25" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">3</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">对客户反馈问题是否进行了纠正预防</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield26" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea26" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">4</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">与客户的沟通渠道是否顺畅</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield27" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea27" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td width="30" align="center" bgcolor="#FFFFFF"><span class="style7">5</span></td>
+      <td width="223" align="left" bgcolor="#FFFFFF"><span class="style7">公司是否有定期进行顾客满意度调查并改进</span></td>
+      <td width="39" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield28" type="text" size="5" />
+      </span></td>
+      <td width="293" align="center" bgcolor="#FFFFFF"><span class="style7">
+        <textarea name="textarea28" cols="38"></textarea>
+      </span></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" bgcolor="#FFFFFF"><strong>综&nbsp;合&nbsp;得&nbsp;分</strong></td>
+      <td colspan="2" align="left" bgcolor="#FFFFFF"><span class="style7">
+        <input name="textfield23" type="text" size="30" />
+      </span></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left" bgcolor="#FFFFFF"><p class="style7">分级标准：</p>
+      <p class="style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A级：综合得分在90分以上&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B级：综合得分75-89.9分</p>
+      <p class="style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C级：综合得分在60-74.9分 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D级：综合得分在59.9分以下</p></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left" bgcolor="#FFFFFF"><strong>供应商综合评价等级</strong>：<span class="style7">
+        <input name="textfield29" type="text" size="30" />
+      </span></td>
+    </tr>
+  </table>
+  <p class="STYLE11">流程：生管/采购→工程主管→品保主管→生管主管/采购→总经理批示</p>
+</form>
+</body>
+</html>

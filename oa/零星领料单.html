@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>签呈</title>
+<style type="text/css">
+<!--
+.style7 {font-size: 12px;"楷体_GB2312";}
+.style9 {
+	font-size: 20px;
+	font-family:"仿宋_2312";
+	font-weight: bold;
+}
+.style10 {color: #999999}
+.style11 {font-weight: bold; color: #FF0000; font-size: 14px; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
+  var d = new Date();
+  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
+  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
+  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
+}
+
+function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
+  var sumY,sumM,sumD,sum;
+  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
+  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
+  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
+  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
+  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
+  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
+  if (sumY*365+sumM*30+sumD+1 >= 0){
+  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
+  }
+  else{
+  var obj = MM_findObj(objDay); if (obj) obj.value=0;
+  }
+}
+//-->
+</script>
+</head>
+
+<body onLoad="MM_setTextOfTextfield('y','m','d')">
+
+<form action method="post" name="form1" id="form1">
+  <table width="500" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+<tbody>
+    <tr>
+      <td align="middle"><div align="center" class="style9"><p><img width="491" height="47"
+      src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /><br />
+      【零星领料单位 】</p>
+      </div></td>
+    </tr>
+    <tr>
+      <td align="middle" bgcolor="#000000"><table width="600" border="1" cellpadding="0"
+      cellspacing="0" bordercolor="#000000" height="628">
+<tbody>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" colspan="6" height="47"><div align="center"
+          class="style7"><p><input name="y" type="text" id="y" style="width:35px" size="20">年<input
+          name="m" type="text" id="m" style="width:28px" size="20">月<input name="d" type="text"
+          id="d" style="width:28px" size="20">日</p>
+          </div></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" colspan="6" height="36"><div align="left"
+          class="style7"><p>部门:<input type="text" name="T1" size="20"> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+          type="radio" value="V1" checked name="R1">领&nbsp;&nbsp; <input type="radio" name="R1"
+          value="V2">借&nbsp;&nbsp; <input type="radio" name="R1" value="V3">保税 
+          &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="R1" value="V4">非保税<br />
+          </p>
+          </div></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="25" align="center"><div align="left"
+          class="style7"><div align="center"><center><p><font face="微软雅黑"><big>代码</big><br
+          />
+          </font></p>
+          </center></div></div></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="25" align="center"><font
+          face="微软雅黑">品名</font></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="25" align="center"><font
+          face="微软雅黑">单位</font></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="25" align="center"><font
+          face="微软雅黑">领料数量</font></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="25" align="center"><font
+          face="微软雅黑">实发数量</font></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="25" align="center"><font
+          face="微软雅黑">备注</font></td>
+        </tr>
+</tbody>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T2"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T3"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T4"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T5"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T6"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T7"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T8"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T9"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T10"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T11"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T12"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T13"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T14"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T15"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T16"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T17"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T18"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T19"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T20"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T21"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T22"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T23"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T24"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T25"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T26"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T27"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T28"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T29"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T30"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="33"><input type="text" name="T31"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="34"><input type="text" name="T32"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="34"><input type="text" name="T33"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="34"><input type="text" name="T34"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="34"><input type="text" name="T35"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="34"><input type="text" name="T36"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="34"><input type="text" name="T37"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T38"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T39"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T40"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T41"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T42"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T43"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T44"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T45"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T46"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T47"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T48"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T49"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T50"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T51"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T52"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T53"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T54"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="35"><input type="text" name="T55"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T56"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T57"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T58"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T59"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T60"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="39"><input type="text" name="T61"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T62"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T63"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T64"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T65"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T66"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="32"><input type="text" name="T67"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T68"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T69"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T70"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T71"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T72"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="31"><input type="text" name="T73"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="40"><input type="text" name="T74"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="40"><input type="text" name="T75"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="40"><input type="text" name="T76"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="40"><input type="text" name="T77"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="40"><input type="text" name="T78"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="40"><input type="text" name="T79"
+          size="20"></td>
+        </tr>
+        <tr>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T80"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T81"
+          size="20"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T82"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T83"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T84"
+          size="5"></td>
+          <td bordercolor="#000000" bgcolor="#ffffff" height="36"><input type="text" name="T85"
+          size="20"></td>
+        </tr>
+      </table>
+      <hr size="1"
+      style="COLOR: #990000; BORDER-TOP-STYLE: dotted; BORDER-RIGHT-STYLE: dotted; BORDER-LEFT-STYLE: dotted; BORDER-BOTTOM-STYLE: dotted"
+      />
+      </td>
+    </tr>
+    <tr>
+      <td class="style7"><span class="style11">※请依规定流程选取签核人員、签核方式：串签。<br
+      />
+      </span></td>
+    </tr>
+    <tr>
+      <td align="right" class="style7">　</td>
+    </tr>
+</tbody>
+  </table>
+</form>
+</body>
+</html>

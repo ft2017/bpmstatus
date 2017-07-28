@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>ÎŞ±êÌâÎÄµµ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>æ— æ ‡é¢˜æ–‡æ¡£</title>
 <script language="JavaScript" type="text/JavaScript">
 <!--
 
@@ -58,7 +58,7 @@ this.sltDate;
 this.target;
 this.source;
 
-/************** ¼ÓÈëÈÕÀúµ×°å¼°ÒõÓ° *********************/
+/************** åŠ å…¥æ—¥å†åº•æ¿åŠé˜´å½± *********************/
 this.addCalendarPad=function(){
    document.write("<div id='divCalendarpad' style='position:absolute;top:100;left:0;width:255;height:187;display:none;'>");
    document.write("<iframe frameborder=0 height=189 width=250></iframe>");
@@ -66,7 +66,7 @@ this.addCalendarPad=function(){
    document.write("</div>");
    calendar.calendarPad=document.all.divCalendarpad;
 }
-/************** ¼ÓÈëÈÕÀúÃæ°å *********************/
+/************** åŠ å…¥æ—¥å†é¢æ¿ *********************/
 this.addCalendarBoard=function(){
    var BOARD=this;
    var divBoard=document.createElement("div");
@@ -79,11 +79,11 @@ this.addCalendarBoard=function(){
    tbBoard.cellPadding=0;
    tbBoard.cellSpacing=1;
 
-/************** ÉèÖÃ¸÷¹¦ÄÜ°´Å¥µÄ¹¦ÄÜ *********************/
+/************** è®¾ç½®å„åŠŸèƒ½æŒ‰é’®çš„åŠŸèƒ½ *********************/
    /*********** Calendar About Button ***************/
    trRow = tbBoard.insertRow(0);
    calendar.calendarAbout=calendar.insertTbCell(trRow,0,"-","center");
-   calendar.calendarAbout.title="°ïÖú ¿ì½İ¼ü:H";
+   calendar.calendarAbout.title="å¸®åŠ© å¿«æ·é”®:H";
    calendar.calendarAbout.onclick=function(){calendar.about();}
    /*********** Calendar Head ***************/
    tbCell=trRow.insertCell(1);
@@ -95,20 +95,20 @@ this.addCalendarBoard=function(){
    /*********** Calendar Close Button ***************/
    tbCell=trRow.insertCell(2);
    calendar.calendarClose = calendar.insertTbCell(trRow,2,"x","center");
-   calendar.calendarClose.title="¹Ø±Õ ¿ì½İ¼ü:ESC»òX";
+   calendar.calendarClose.title="å…³é—­ å¿«æ·é”®:ESCæˆ–X";
    calendar.calendarClose.onclick=function(){calendar.hide();}
 
    /*********** Calendar PrevYear Button ***************/
    trRow = tbBoard.insertRow(1);
    calendar.prevYear = calendar.insertTbCell(trRow,0,"<<<","center");
-   calendar.prevYear.title="ÉÏÒ»Äê ¿ì½İ¼ü:¡ü";
+   calendar.prevYear.title="ä¸Šä¸€å¹´ å¿«æ·é”®:â†‘";
    calendar.prevYear.onmousedown=function(){
     calendar.currentDate[0]--;
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
    }
    /*********** Calendar PrevMonth Button ***************/
    calendar.prevMonth = calendar.insertTbCell(trRow,1,"<<","center");
-   calendar.prevMonth.title="ÉÏÒ»ÔÂ ¿ì½İ¼ü:¡û";
+   calendar.prevMonth.title="ä¸Šä¸€æœˆ å¿«æ·é”®:â†";
    calendar.prevMonth.onmousedown=function(){
     calendar.currentDate[1]--;
     if(calendar.currentDate[1]==0){
@@ -118,8 +118,8 @@ this.addCalendarBoard=function(){
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
    }
    /*********** Calendar Today Button ***************/
-   calendar.goToday = calendar.insertTbCell(trRow,2,"½ñÌì","center",3);
-   calendar.goToday.title="Ñ¡Ôñ½ñÌì ¿ì½İ¼ü:T";
+   calendar.goToday = calendar.insertTbCell(trRow,2,"ä»Šå¤©","center",3);
+   calendar.goToday.title="é€‰æ‹©ä»Šå¤© å¿«æ·é”®:T";
    calendar.goToday.onclick=function(){
 if(calendar.returnTime) 
      calendar.sltDate=calendar.today[0]+"-"+calendar.formatTime(calendar.today[1])+"-"+calendar.formatTime(calendar.today[2])+" "+calendar.formatTime(calendar.today[3])+":"+calendar.formatTime(calendar.today[4])
@@ -131,7 +131,7 @@ else
    }
    /*********** Calendar NextMonth Button ***************/
    calendar.nextMonth = calendar.insertTbCell(trRow,3,">","center");
-   calendar.nextMonth.title="ÏÂÒ»ÔÂ ¿ì½İ¼ü:¡ú";
+   calendar.nextMonth.title="ä¸‹ä¸€æœˆ å¿«æ·é”®:â†’";
    calendar.nextMonth.onmousedown=function(){
     calendar.currentDate[1]++;
     if(calendar.currentDate[1]==13){
@@ -142,7 +142,7 @@ else
    }
    /*********** Calendar NextYear Button ***************/
    calendar.nextYear = calendar.insertTbCell(trRow,4,">>","center");
-   calendar.nextYear.title="ÏÂÒ»Äê ¿ì½İ¼ü:¡ı";
+   calendar.nextYear.title="ä¸‹ä¸€å¹´ å¿«æ·é”®:â†“";
    calendar.nextYear.onmousedown=function(){
     calendar.currentDate[0]++;
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
@@ -150,7 +150,7 @@ else
    }
 
    trRow = tbBoard.insertRow(2);
-   var cnDateName = new Array("ÈÕ","Ò»","¶ş","Èı","ËÄ","Îå","Áù");
+   var cnDateName = new Array("æ—¥","ä¸€","äºŒ","ä¸‰","å››","äº”","å…­");
    for (var i = 0; i < 7; i++) {
     tbCell=trRow.insertCell(i)
     tbCell.innerText=cnDateName[i];
@@ -178,7 +178,7 @@ else
    trRow = tbBoard.insertRow(4);
    tbCell=trRow.insertCell(0);
    calendar.prevHours = calendar.insertTbCell(trRow,0,"-","center");
-   calendar.prevHours.title="Ğ¡Ê±µ÷Õû ¿ì½İ¼ü:Home";
+   calendar.prevHours.title="å°æ—¶è°ƒæ•´ å¿«æ·é”®:Home";
    calendar.prevHours.onmousedown=function(){
    calendar.currentDate[3]--;
    if(calendar.currentDate[3]==-1) calendar.currentDate[3]=23;
@@ -186,7 +186,7 @@ else
 }
    tbCell=trRow.insertCell(1);
    calendar.nextHours = calendar.insertTbCell(trRow,1,"+","center");
-   calendar.nextHours.title="Ğ¡Ê±µ÷Õû ¿ì½İ¼ü:End";
+   calendar.nextHours.title="å°æ—¶è°ƒæ•´ å¿«æ·é”®:End";
    calendar.nextHours.onmousedown=function(){
    calendar.currentDate[3]++;
    if(calendar.currentDate[3]==24) calendar.currentDate[3]=0;
@@ -200,7 +200,7 @@ else
    calendar.bottom=tbCell;
    tbCell=trRow.insertCell(3);
    calendar.prevMinutes = calendar.insertTbCell(trRow,3,"-","center");
-   calendar.prevMinutes.title="·ÖÖÓµ÷Õû ¿ì½İ¼ü:PageUp";
+   calendar.prevMinutes.title="åˆ†é’Ÿè°ƒæ•´ å¿«æ·é”®:PageUp";
    calendar.prevMinutes.onmousedown=function(){
    calendar.currentDate[4]--;
    if(calendar.currentDate[4]==-1) calendar.currentDate[4]=59;
@@ -208,7 +208,7 @@ else
 }
    tbCell=trRow.insertCell(4);
    calendar.nextMinutes = calendar.insertTbCell(trRow,4,"+","center");
-   calendar.nextMinutes.title="·ÖÖÓµ÷Õû ¿ì½İ¼ü:PageDown";
+   calendar.nextMinutes.title="åˆ†é’Ÿè°ƒæ•´ å¿«æ·é”®:PageDown";
    calendar.nextMinutes.onmousedown=function(){
    calendar.currentDate[4]++;
    if(calendar.currentDate[4]==60) calendar.currentDate[4]=0;
@@ -217,7 +217,7 @@ else
 
 }
 
-/************** ¼ÓÈë¹¦ÄÜ°´Å¥¹«¹²ÑùÊ½ *********************/
+/************** åŠ å…¥åŠŸèƒ½æŒ‰é’®å…¬å…±æ ·å¼ *********************/
 this.insertTbCell=function(trRow,cellIndex,TXT,trAlign,tbColSpan){
    var tbCell=trRow.insertCell(cellIndex);
    if(tbColSpan!=undefined) tbCell.colSpan=tbColSpan;
@@ -257,7 +257,7 @@ this.setDefaultDate=function(){
 /****************** Show Calendar *********************/
 this.show=function(targetObject,returnTime,defaultDate,sourceObject){
    if(targetObject==undefined) {
-    alert("Î´ÉèÖÃÄ¿±ê¶ÔÏó. \n·½·¨: ATCALENDAR.show(obj Ä¿±ê¶ÔÏó,boolean ÊÇ·ñ·µ»ØÊ±¼ä,string Ä¬ÈÏÈÕÆÚ,obj µã»÷¶ÔÏó);\n\nÄ¿±ê¶ÔÏó:½ÓÊÜÈÕÆÚ·µ»ØÖµµÄ¶ÔÏó.\nÄ¬ÈÏÈÕÆÚ:¸ñÊ½Îª\"yyyy-mm-dd\",È±Ê¡Îªµ±Ç°ÈÕÆÚ.\nµã»÷¶ÔÏó:µã»÷Õâ¸ö¶ÔÏóµ¯³öcalendar,Ä¬ÈÏÎªÄ¿±ê¶ÔÏó.\n");
+    alert("æœªè®¾ç½®ç›®æ ‡å¯¹è±¡. \næ–¹æ³•: ATCALENDAR.show(obj ç›®æ ‡å¯¹è±¡,boolean æ˜¯å¦è¿”å›æ—¶é—´,string é»˜è®¤æ—¥æœŸ,obj ç‚¹å‡»å¯¹è±¡);\n\nç›®æ ‡å¯¹è±¡:æ¥å—æ—¥æœŸè¿”å›å€¼çš„å¯¹è±¡.\né»˜è®¤æ—¥æœŸ:æ ¼å¼ä¸º\"yyyy-mm-dd\",ç¼ºçœä¸ºå½“å‰æ—¥æœŸ.\nç‚¹å‡»å¯¹è±¡:ç‚¹å‡»è¿™ä¸ªå¯¹è±¡å¼¹å‡ºcalendar,é»˜è®¤ä¸ºç›®æ ‡å¯¹è±¡.\n");
     return false;
    }
    else calendar.target=targetObject;
@@ -282,7 +282,7 @@ theDate[3]=calendar.today[3]; theDate[4]=calendar.today[4];
     var Datereg=/^\d{4}-\d{1,2}-\d{2}$/
     var DateTimereg=/^(\d{1,4})-(\d{1,2})-(\d{1,2}) (\d{1,2}):(\d{1,2})$/
     if((!defaultDate.match(Datereg)) && (!defaultDate.match(DateTimereg))){
-     alert("Ä¬ÈÏÈÕÆÚ(Ê±¼ä)µÄ¸ñÊ½²»ÕıÈ·£¡\t\n\nÄ¬ÈÏ¿É½ÓÊÜ¸ñÊ½Îª:\n1¡¢yyyy-mm-dd \n2¡¢yyyy-mm-dd hh:mm\n3¡¢(¿Õ)");
+     alert("é»˜è®¤æ—¥æœŸ(æ—¶é—´)çš„æ ¼å¼ä¸æ­£ç¡®ï¼\t\n\né»˜è®¤å¯æ¥å—æ ¼å¼ä¸º:\n1ã€yyyy-mm-dd \n2ã€yyyy-mm-dd hh:mm\n3ã€(ç©º)");
 calendar.setDefaultDate();
      return;
     }
@@ -310,11 +310,11 @@ theDate[4]=strDateTime[5];
 
    calendar.calendarPad.style.display="";
    var theRows = Math.ceil((theMonthLen)/7);
-   //Çå³ı¾ÉµÄÈÕÀú;
+   //æ¸…é™¤æ—§çš„æ—¥å†;
    while (calendar.body.rows.length > 0) {
     calendar.body.deleteRow(0)
    }
-   //½¨Á¢ĞÂµÄÈÕÀú;
+   //å»ºç«‹æ–°çš„æ—¥å†;
    var n=0;day=0;
    for(i=0;i<theRows;i++){
     theRow=calendar.body.insertRow(i);
@@ -332,8 +332,8 @@ theDate[4]=strDateTime[5];
     }
    }
 
-   //****************µ÷ÕûÈÕÀúÎ»ÖÃ**************//
-   var offsetPos=calendar.getAbsolutePos(calendar.source);//¼ÆËã¶ÔÏóµÄÎ»ÖÃ;
+   //****************è°ƒæ•´æ—¥å†ä½ç½®**************//
+   var offsetPos=calendar.getAbsolutePos(calendar.source);//è®¡ç®—å¯¹è±¡çš„ä½ç½®;
    if((document.body.offsetHeight-(offsetPos.y+calendar.source.offsetHeight-document.body.scrollTop))<calendar.calendarPad.style.pixelHeight){
     var calTop=offsetPos.y-calendar.calendarPad.style.pixelHeight;
    }
@@ -350,7 +350,7 @@ theDate[4]=strDateTime[5];
    calendar.calendarPad.style.pixelLeft=calLeft;
    calendar.calendarPad.style.pixelTop=calTop;
 }
-/****************** ¼ÆËã¶ÔÏóµÄÎ»ÖÃ *************************/
+/****************** è®¡ç®—å¯¹è±¡çš„ä½ç½® *************************/
 this.getAbsolutePos = function(el) {
    var r = { x: el.offsetLeft, y: el.offsetTop };
    if (el.offsetParent) {
@@ -361,7 +361,7 @@ this.getAbsolutePos = function(el) {
    return r;
 };
 
-//************* ²åÈëÈÕÆÚµ¥Ôª¸ñ **************/
+//************* æ’å…¥æ—¥æœŸå•å…ƒæ ¼ **************/
 this.insertBodyCell=function(theRow,j,day,targetObject){
    var theCell=theRow.insertCell(j);
    if(j==0) var theBgColor="#FF9999";
@@ -394,12 +394,12 @@ else
     calendar.hide();
    }
 }
-/************** È¡µÃÔÂ·İµÄµÚÒ»ÌìÎªĞÇÆÚ¼¸ *********************/
+/************** å–å¾—æœˆä»½çš„ç¬¬ä¸€å¤©ä¸ºæ˜ŸæœŸå‡  *********************/
 this.getFirstDay=function(theYear, theMonth){
    var firstDate = new Date(theYear,theMonth-1,1);
    return firstDate.getDay();
 }
-/************** È¡µÃÔÂ·İ¹²ÓĞ¼¸Ìì *********************/
+/************** å–å¾—æœˆä»½å…±æœ‰å‡ å¤© *********************/
 
 this.getMonthLen=function(theYear, theMonth) {
    theMonth--;
@@ -409,36 +409,36 @@ this.getMonthLen=function(theYear, theMonth) {
    var len = Math.ceil((nextMonth.getTime() - thisMonth.getTime())/oneDay);
    return len;
 }
-/************** Òş²ØÈÕÀú *********************/
+/************** éšè—æ—¥å† *********************/
 this.hide=function(){
    //calendar.clearEventKey();
    calendar.calendarPad.style.display="none";
    
 }
-/************** ´ÓÕâÀï¿ªÊ¼ *********************/
+/************** ä»è¿™é‡Œå¼€å§‹ *********************/
 this.setup=function(defaultDate){
    calendar.addCalendarPad();
    calendar.addCalendarBoard();
    calendar.setDefaultDate();
 }
-/************** ¸ñÊ½»¯Ê±¼ä *********************/
+/************** æ ¼å¼åŒ–æ—¶é—´ *********************/
 this.formatTime = function(str) {
 str = ("00"+str);
 return str.substr(str.length-2);
 }
 
-/************** ¹ØÓÚAgetimeCalendar *********************/
+/************** å…³äºAgetimeCalendar *********************/
 this.about=function(){
-   var strAbout = "\nWeb ÈÕÀúÑ¡ÔñÊäÈë¿Ø¼ş²Ù×÷ËµÃ÷:\n\n";
-   strAbout+="-\t: ¹ØÓÚ\n";
-   strAbout+="x\t: Òş²Ø\n";
-   strAbout+="<<\t: ÉÏÒ»Äê\n";
-   strAbout+="<\t: ÉÏÒ»ÔÂ\n";
+   var strAbout = "\nWeb æ—¥å†é€‰æ‹©è¾“å…¥æ§ä»¶æ“ä½œè¯´æ˜:\n\n";
+   strAbout+="-\t: å…³äº\n";
+   strAbout+="x\t: éšè—\n";
+   strAbout+="<<\t: ä¸Šä¸€å¹´\n";
+   strAbout+="<\t: ä¸Šä¸€æœˆ\n";
 
-   strAbout+="½ñÈÕ\t: ·µ»Øµ±ÌìÈÕÆÚ\n";
-   strAbout+=">\t: ÏÂÒ»ÔÂ\n";
-   strAbout+="<<\t: ÏÂÒ»Äê\n";
-   strAbout+="\nWebÈÕÀúÑ¡ÔñÊäÈë¿Ø¼ş\tVer:v1.0\t\nDesigned By:wxb \t\t2004.11.22\t\n";
+   strAbout+="ä»Šæ—¥\t: è¿”å›å½“å¤©æ—¥æœŸ\n";
+   strAbout+=">\t: ä¸‹ä¸€æœˆ\n";
+   strAbout+="<<\t: ä¸‹ä¸€å¹´\n";
+   strAbout+="\nWebæ—¥å†é€‰æ‹©è¾“å…¥æ§ä»¶\tVer:v1.0\t\nDesigned By:wxb \t\t2004.11.22\t\n";
    alert(strAbout);
 }
 
@@ -449,10 +449,10 @@ if(calendar.calendarPad.style.display=="none"){
 }
 switch(window.event.keyCode){
    case 27 : calendar.hide(); break; //ESC
-   case 37 : calendar.prevMonth.onmousedown(); break;//¡û
-   case 38 : calendar.prevYear.onmousedown();break; //¡ü
-   case 39 : calendar.nextMonth.onmousedown(); break;//¡ú
-   case 40 : calendar.nextYear.onmousedown(); break;//¡ı
+   case 37 : calendar.prevMonth.onmousedown(); break;//â†
+   case 38 : calendar.prevYear.onmousedown();break; //â†‘
+   case 39 : calendar.nextMonth.onmousedown(); break;//â†’
+   case 40 : calendar.nextYear.onmousedown(); break;//â†“
    case 84 : calendar.goToday.onclick(); break;//T
    case 88 : calendar.hide(); break;   //X
    case 72 : calendar.about(); break;   //H 
@@ -489,7 +489,7 @@ var CalendarWebControl = new atCalendarControl();
   <div align="left">
     <table width="800">
       <tr>
-        <td width="721"><div align="center">ÖÎ£¨¼Ğ£©¾ßÑéÖ¤±¨¸æ </div></td>
+        <td width="721"><div align="center">æ²»ï¼ˆå¤¹ï¼‰å…·éªŒè¯æŠ¥å‘Š </div></td>
         <td width="67">&nbsp;</td>
       </tr>
     </table>
@@ -498,14 +498,14 @@ var CalendarWebControl = new atCalendarControl();
 <div>
   <table width="726" height="25" border="1">
     <tr>
-      <td width="81">²úÆ·Ãû³Æ</td>
+      <td width="81">äº§å“åç§°</td>
       <td width="277"><form id="form9" name="form9" method="post" action="">
         <label>
           <input name="textfield9" type="text" size="36" />
           </label>
       </form>
       </td>
-      <td width="88"><div align="justify">ÖÆÔì³§ÉÌ</div></td>
+      <td width="88"><div align="justify">åˆ¶é€ å‚å•†</div></td>
       <td width="252"><form id="form10" name="form10" method="post" action="">
         <label>
           <input name="textfield10" type="text" size="30" />
@@ -521,21 +521,21 @@ var CalendarWebControl = new atCalendarControl();
 <div>
   <table width="726" border="1">
     <tr>
-      <td width="81">Ä£¾ßÃû³Æ</td>
+      <td width="81">æ¨¡å…·åç§°</td>
       <td width="77"><form id="form11" name="form11" method="post" action="">
         <label>
           <input name="textfield11" type="text" size="10" />
           </label>
       </form>
       </td>
-      <td width="44">Ä£ºÅ</td>
+      <td width="44">æ¨¡å·</td>
       <td width="144"><form id="form12" name="form12" method="post" action="">
         <label>
           <input name="textfield12" type="text" size="15" />
           </label>
       </form>
       </td>
-      <td width="89"><div align="justify">ÑéÖ¤ÈÕÆÚ</div></td>
+      <td width="89"><div align="justify">éªŒè¯æ—¥æœŸ</div></td>
       <td width="251"><form id="form13" name="form13" method="post" action="">
         <label>
           <input name="textfield13" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="30" />
@@ -547,20 +547,20 @@ var CalendarWebControl = new atCalendarControl();
   <div>
     <table width="726" border="1">
       <tr>
-        <td width="41">ÖÖÀà</td>
+        <td width="41">ç§ç±»</td>
         <td width="316"><form id="form1" name="form1" method="post" action="">
           <label>
             <select name="select">
-              <option>ÖÎ¾ß</option>
-              <option>¼Ğ¾ß</option>
-              <option>ÆäËû</option>
+              <option>æ²»å…·</option>
+              <option>å¤¹å…·</option>
+              <option>å…¶ä»–</option>
             </select>
             </label>
           <label>
           <input name="textfield3" type="text" size="30" />
           </label>
         </form>        </td>
-        <td width="92">Ä£Ñ¨Êı</td>
+        <td width="92">æ¨¡ç©´æ•°</td>
         <td width="249"><form id="form14" name="form14" method="post" action="">
           <label>
             <input name="textfield14" type="text" size="30" />
@@ -575,14 +575,14 @@ var CalendarWebControl = new atCalendarControl();
 <div>
   <table width="726" border="1">
     <tr>
-      <td width="125">ÊÔÄ£»úÌ¨¼°ĞÍºÅ</td>
+      <td width="125">è¯•æ¨¡æœºå°åŠå‹å·</td>
       <td width="235"><form id="form15" name="form15" method="post" action="">
         <label>
           <input name="textfield15" type="text" size="30" />
           </label>
       </form>
       </td>
-      <td width="89">ÊÔÄ£µ¥Î»</td>
+      <td width="89">è¯•æ¨¡å•ä½</td>
       <td width="249"><form id="form16" name="form16" method="post" action="">
         <label>
           <input name="textfield16" type="text" size="30" />
@@ -594,26 +594,26 @@ var CalendarWebControl = new atCalendarControl();
   <div>
     <table width="726" height="148" border="1" cellspacing="0">
       <tr>
-        <td width="13" height="146" valign="top"><p>ÊÔ<br />
-          Ä£<br />
-          ×´<br />
-        ¿ö<br />
-        ¼Ç<br />
-        Â¼</p>          </td>
+        <td width="13" height="146" valign="top"><p>è¯•<br />
+          æ¨¡<br />
+          çŠ¶<br />
+        å†µ<br />
+        è®°<br />
+        å½•</p>          </td>
         <td width="324"  valign="top"><div>
           <form id="form2" name="form2" method="post" action="">
             <label>
               <textarea name="textfield" cols="40" rows="8" style="overflow:hidden"></textarea>
               </label>
-            <p>ÊÔÄ£Õß£º
+            <p>è¯•æ¨¡è€…ï¼š
               <label>
               <input type="text" name="textfield2" />
               </label>
             </p>
           </form>
           </div></td>
-        <td width="23">¼ò<br />
-        Í¼</td>
+        <td width="23">ç®€<br />
+        å›¾</td>
         <td width="348" valign="top"><form id="form3" name="form3" method="post" action="" >
           <label>
           <textarea name="textarea" cols="42" rows="10"style="overflow:hidden"></textarea>
@@ -629,8 +629,8 @@ var CalendarWebControl = new atCalendarControl();
 <div>
 <table width="727" height="40" border="1" cellspacing="0">
     <tr>
-      <td width="82" height="46" valign="top"><p>ÅĞ¶Ï<br />
-      ½á¹û</p>
+      <td width="82" height="46" valign="top"><p>åˆ¤æ–­<br />
+      ç»“æœ</p>
       </td>
       <td width="635" valign="top"><form id="form4" name="form4" method="post" action="">
         
@@ -643,28 +643,28 @@ var CalendarWebControl = new atCalendarControl();
 <div>
   <table width="727" border="1">
     <tr>
-      <td width="84">ºË×¼</td>
+      <td width="84">æ ¸å‡†</td>
       <td width="91"><form id="form5" name="form5" method="post" action="">
         <label>
           <input name="textfield5" type="text" size="13" />
           </label>
       </form>
       </td>
-      <td width="61">ÉóºË</td>
+      <td width="61">å®¡æ ¸</td>
       <td width="91"><form id="form6" name="form6" method="post" action="">
         <label>
           <input name="textfield6" type="text" size="13" />
           </label>
       </form>
       </td>
-      <td width="77">Ê¹ÓÃµ¥Î»</td>
+      <td width="77">ä½¿ç”¨å•ä½</td>
       <td width="84"><form id="form7" name="form7" method="post" action="">
         <label>
           <input name="textfield7" type="text" size="12" />
           </label>
       </form>
       </td>
-      <td width="82">ÖÆ±í</td>
+      <td width="82">åˆ¶è¡¨</td>
       <td width="103"><form id="form8" name="form8" method="post" action="">
         <label>
           <input name="textfield8" type="text" size="13" />

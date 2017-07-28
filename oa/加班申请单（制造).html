@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
-<title>加班申请单</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>�����宠�峰��</title>
 <style type="text/css">
 <!--
-.style7 {font-size: 12px;"楷体_GB2312";}
+.style7 {font-size: 12px;"妤蜂�_GB2312";}
 .style9 {
 	font-size: 20px;
-	font-family:"仿宋_2312";
+	font-family:"浠垮��_2312";
 	font-weight: bold;
 }
 .style10 {color: #999999}
@@ -35,7 +35,7 @@ this.sltDate;
 this.target;
 this.source;
 
-/************** 加入日历底板及阴影 *********************/
+/************** ���ユ�ュ��搴��垮���村奖 *********************/
 this.addCalendarPad=function(){
    document.write("<div id='divCalendarpad' style='position:absolute;top:100;left:0;width:255;height:187;display:none;'>");
    document.write("<iframe frameborder=0 height=189 width=250></iframe>");
@@ -43,7 +43,7 @@ this.addCalendarPad=function(){
    document.write("</div>");
    calendar.calendarPad=document.all.divCalendarpad;
 }
-/************** 加入日历面板 *********************/
+/************** ���ユ�ュ���㈡�� *********************/
 this.addCalendarBoard=function(){
    var BOARD=this;
    var divBoard=document.createElement("div");
@@ -56,11 +56,11 @@ this.addCalendarBoard=function(){
    tbBoard.cellPadding=0;
    tbBoard.cellSpacing=1;
 
-/************** 设置各功能按钮的功能 *********************/
+/************** 璁剧疆�����芥���������� *********************/
    /*********** Calendar About Button ***************/
    trRow = tbBoard.insertRow(0);
    calendar.calendarAbout=calendar.insertTbCell(trRow,0,"-","center");
-   calendar.calendarAbout.title="帮助 快捷键:H";
+   calendar.calendarAbout.title="甯��� 蹇��烽��:H";
    calendar.calendarAbout.onclick=function(){calendar.about();}
    /*********** Calendar Head ***************/
    tbCell=trRow.insertCell(1);
@@ -72,20 +72,20 @@ this.addCalendarBoard=function(){
    /*********** Calendar Close Button ***************/
    tbCell=trRow.insertCell(2);
    calendar.calendarClose = calendar.insertTbCell(trRow,2,"x","center");
-   calendar.calendarClose.title="关闭 快捷键:ESC或X";
+   calendar.calendarClose.title="�抽�� 蹇��烽��:ESC��X";
    calendar.calendarClose.onclick=function(){calendar.hide();}
 
    /*********** Calendar PrevYear Button ***************/
    trRow = tbBoard.insertRow(1);
    calendar.prevYear = calendar.insertTbCell(trRow,0,"<<<","center");
-   calendar.prevYear.title="上一年 快捷键:↑";
+   calendar.prevYear.title="涓�涓�骞� 蹇��烽��:��";
    calendar.prevYear.onmousedown=function(){
     calendar.currentDate[0]--;
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
    }
    /*********** Calendar PrevMonth Button ***************/
    calendar.prevMonth = calendar.insertTbCell(trRow,1,"<<","center");
-   calendar.prevMonth.title="上一月 快捷键:←";
+   calendar.prevMonth.title="涓�涓��� 蹇��烽��:��";
    calendar.prevMonth.onmousedown=function(){
     calendar.currentDate[1]--;
     if(calendar.currentDate[1]==0){
@@ -95,8 +95,8 @@ this.addCalendarBoard=function(){
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
    }
    /*********** Calendar Today Button ***************/
-   calendar.goToday = calendar.insertTbCell(trRow,2,"今天","center",3);
-   calendar.goToday.title="选择今天 快捷键:T";
+   calendar.goToday = calendar.insertTbCell(trRow,2,"浠�澶�","center",3);
+   calendar.goToday.title="���╀�澶� 蹇��烽��:T";
    calendar.goToday.onclick=function(){
 if(calendar.returnTime) 
      calendar.sltDate=calendar.today[0]+"-"+calendar.formatTime(calendar.today[1])+"-"+calendar.formatTime(calendar.today[2])+" "+calendar.formatTime(calendar.today[3])+":"+calendar.formatTime(calendar.today[4])
@@ -108,7 +108,7 @@ else
    }
    /*********** Calendar NextMonth Button ***************/
    calendar.nextMonth = calendar.insertTbCell(trRow,3,">","center");
-   calendar.nextMonth.title="下一月 快捷键:→";
+   calendar.nextMonth.title="涓�涓��� 蹇��烽��:��";
    calendar.nextMonth.onmousedown=function(){
     calendar.currentDate[1]++;
     if(calendar.currentDate[1]==13){
@@ -119,7 +119,7 @@ else
    }
    /*********** Calendar NextYear Button ***************/
    calendar.nextYear = calendar.insertTbCell(trRow,4,">>","center");
-   calendar.nextYear.title="下一年 快捷键:↓";
+   calendar.nextYear.title="涓�涓�骞� 蹇��烽��:��";
    calendar.nextYear.onmousedown=function(){
     calendar.currentDate[0]++;
     calendar.show(calendar.target,calendar.returnTime,calendar.currentDate[0]+"-"+calendar.formatTime(calendar.currentDate[1])+"-"+calendar.formatTime(calendar.currentDate[2]),calendar.source);
@@ -127,7 +127,7 @@ else
    }
 
    trRow = tbBoard.insertRow(2);
-   var cnDateName = new Array("日","一","二","三","四","五","六");
+   var cnDateName = new Array("��","涓�","浜�","涓�","��","浜�","��");
    for (var i = 0; i < 7; i++) {
     tbCell=trRow.insertCell(i)
     tbCell.innerText=cnDateName[i];
@@ -155,7 +155,7 @@ else
    trRow = tbBoard.insertRow(4);
    tbCell=trRow.insertCell(0);
    calendar.prevHours = calendar.insertTbCell(trRow,0,"-","center");
-   calendar.prevHours.title="小时调整 快捷键:Home";
+   calendar.prevHours.title="灏��惰��� 蹇��烽��:Home";
    calendar.prevHours.onmousedown=function(){
    calendar.currentDate[3]--;
    if(calendar.currentDate[3]==-1) calendar.currentDate[3]=23;
@@ -163,7 +163,7 @@ else
 }
    tbCell=trRow.insertCell(1);
    calendar.nextHours = calendar.insertTbCell(trRow,1,"+","center");
-   calendar.nextHours.title="小时调整 快捷键:End";
+   calendar.nextHours.title="灏��惰��� 蹇��烽��:End";
    calendar.nextHours.onmousedown=function(){
    calendar.currentDate[3]++;
    if(calendar.currentDate[3]==24) calendar.currentDate[3]=0;
@@ -177,7 +177,7 @@ else
    calendar.bottom=tbCell;
    tbCell=trRow.insertCell(3);
    calendar.prevMinutes = calendar.insertTbCell(trRow,3,"-","center");
-   calendar.prevMinutes.title="分钟调整 快捷键:PageUp";
+   calendar.prevMinutes.title="����璋��� 蹇��烽��:PageUp";
    calendar.prevMinutes.onmousedown=function(){
    calendar.currentDate[4]--;
    if(calendar.currentDate[4]==-1) calendar.currentDate[4]=59;
@@ -185,7 +185,7 @@ else
 }
    tbCell=trRow.insertCell(4);
    calendar.nextMinutes = calendar.insertTbCell(trRow,4,"+","center");
-   calendar.nextMinutes.title="分钟调整 快捷键:PageDown";
+   calendar.nextMinutes.title="����璋��� 蹇��烽��:PageDown";
    calendar.nextMinutes.onmousedown=function(){
    calendar.currentDate[4]++;
    if(calendar.currentDate[4]==60) calendar.currentDate[4]=0;
@@ -194,7 +194,7 @@ else
 
 }
 
-/************** 加入功能按钮公共样式 *********************/
+/************** ���ュ���芥�������辨�峰� *********************/
 this.insertTbCell=function(trRow,cellIndex,TXT,trAlign,tbColSpan){
    var tbCell=trRow.insertCell(cellIndex);
    if(tbColSpan!=undefined) tbCell.colSpan=tbColSpan;
@@ -234,7 +234,7 @@ this.setDefaultDate=function(){
 /****************** Show Calendar *********************/
 this.show=function(targetObject,returnTime,defaultDate,sourceObject){
    if(targetObject==undefined) {
-    alert("未设置目标对象. \n方法: ATCALENDAR.show(obj 目标对象,boolean 是否返回时间,string 默认日期,obj 点击对象);\n\n目标对象:接受日期返回值的对象.\n默认日期:格式为\"yyyy-mm-dd\",缺省为当前日期.\n点击对象:点击这个对象弹出calendar,默认为目标对象.\n");
+    alert("��璁剧疆����瀵硅薄. \n�规�: ATCALENDAR.show(obj ����瀵硅薄,boolean ����杩����堕��,string 榛�璁ゆ�ユ��,obj �瑰�诲�硅薄);\n\n����瀵硅薄:�ュ���ユ��杩����肩��瀵硅薄.\n榛�璁ゆ�ユ��:�煎�涓�\"yyyy-mm-dd\",缂虹��涓哄����ユ��.\n�瑰�诲�硅薄:�瑰�昏�涓�瀵硅薄寮瑰��calendar,榛�璁や负����瀵硅薄.\n");
     return false;
    }
    else calendar.target=targetObject;
@@ -259,7 +259,7 @@ theDate[3]=calendar.today[3]; theDate[4]=calendar.today[4];
     var Datereg=/^\d{4}-\d{1,2}-\d{2}$/
     var DateTimereg=/^(\d{1,4})-(\d{1,2})-(\d{1,2}) (\d{1,2}):(\d{1,2})$/
     if((!defaultDate.match(Datereg)) && (!defaultDate.match(DateTimereg))){
-     alert("默认日期(时间)的格式不正确！\t\n\n默认可接受格式为:\n1、yyyy-mm-dd \n2、yyyy-mm-dd hh:mm\n3、(空)");
+     alert("榛�璁ゆ�ユ��(�堕��)���煎�涓�姝ｇ‘锛�\t\n\n榛�璁ゅ���ュ���煎�涓�:\n1��yyyy-mm-dd \n2��yyyy-mm-dd hh:mm\n3��(绌�)");
 calendar.setDefaultDate();
      return;
     }
@@ -287,11 +287,11 @@ theDate[4]=strDateTime[5];
 
    calendar.calendarPad.style.display="";
    var theRows = Math.ceil((theMonthLen)/7);
-   //清除旧的日历;
+   //娓��ゆ�х���ュ��;
    while (calendar.body.rows.length > 0) {
     calendar.body.deleteRow(0)
    }
-   //建立新的日历;
+   //寤虹���扮���ュ��;
    var n=0;day=0;
    for(i=0;i<theRows;i++){
     theRow=calendar.body.insertRow(i);
@@ -309,8 +309,8 @@ theDate[4]=strDateTime[5];
     }
    }
 
-   //****************调整日历位置**************//
-   var offsetPos=calendar.getAbsolutePos(calendar.source);//计算对象的位置;
+   //****************璋��存�ュ��浣�缃�**************//
+   var offsetPos=calendar.getAbsolutePos(calendar.source);//璁＄��瀵硅薄��浣�缃�;
    if((document.body.offsetHeight-(offsetPos.y+calendar.source.offsetHeight-document.body.scrollTop))<calendar.calendarPad.style.pixelHeight){
     var calTop=offsetPos.y-calendar.calendarPad.style.pixelHeight;
    }
@@ -327,7 +327,7 @@ theDate[4]=strDateTime[5];
    calendar.calendarPad.style.pixelLeft=calLeft;
    calendar.calendarPad.style.pixelTop=calTop;
 }
-/****************** 计算对象的位置 *************************/
+/****************** 璁＄��瀵硅薄��浣�缃� *************************/
 this.getAbsolutePos = function(el) {
    var r = { x: el.offsetLeft, y: el.offsetTop };
    if (el.offsetParent) {
@@ -338,7 +338,7 @@ this.getAbsolutePos = function(el) {
    return r;
 };
 
-//************* 插入日期单元格 **************/
+//************* ���ユ�ユ�������� **************/
 this.insertBodyCell=function(theRow,j,day,targetObject){
    var theCell=theRow.insertCell(j);
    if(j==0) var theBgColor="#FF9999";
@@ -371,12 +371,12 @@ else
     calendar.hide();
    }
 }
-/************** 取得月份的第一天为星期几 *********************/
+/************** ��寰���浠界��绗�涓�澶╀负������ *********************/
 this.getFirstDay=function(theYear, theMonth){
    var firstDate = new Date(theYear,theMonth-1,1);
    return firstDate.getDay();
 }
-/************** 取得月份共有几天 *********************/
+/************** ��寰���浠藉�辨����澶� *********************/
 
 this.getMonthLen=function(theYear, theMonth) {
    theMonth--;
@@ -386,36 +386,36 @@ this.getMonthLen=function(theYear, theMonth) {
    var len = Math.ceil((nextMonth.getTime() - thisMonth.getTime())/oneDay);
    return len;
 }
-/************** 隐藏日历 *********************/
+/************** �����ュ�� *********************/
 this.hide=function(){
    //calendar.clearEventKey();
    calendar.calendarPad.style.display="none";
    
 }
-/************** 从这里开始 *********************/
+/************** 浠�杩���寮�濮� *********************/
 this.setup=function(defaultDate){
    calendar.addCalendarPad();
    calendar.addCalendarBoard();
    calendar.setDefaultDate();
 }
-/************** 格式化时间 *********************/
+/************** �煎����堕�� *********************/
 this.formatTime = function(str) {
 str = ("00"+str);
 return str.substr(str.length-2);
 }
 
-/************** 关于AgetimeCalendar *********************/
+/************** �充�AgetimeCalendar *********************/
 this.about=function(){
-   var strAbout = "\nWeb 日历选择输入控件操作说明:\n\n";
-   strAbout+="-\t: 关于\n";
-   strAbout+="x\t: 隐藏\n";
-   strAbout+="<<\t: 上一年\n";
-   strAbout+="<\t: 上一月\n";
+   var strAbout = "\nWeb �ュ�����╄��ユ�т欢��浣�璇存��:\n\n";
+   strAbout+="-\t: �充�\n";
+   strAbout+="x\t: ����\n";
+   strAbout+="<<\t: 涓�涓�骞�\n";
+   strAbout+="<\t: 涓�涓���\n";
 
-   strAbout+="今日\t: 返回当天日期\n";
-   strAbout+=">\t: 下一月\n";
-   strAbout+="<<\t: 下一年\n";
-   strAbout+="\nWeb日历选择输入控件\tVer:v1.0\t\nDesigned By:wxb \t\t2004.11.22\t\n";
+   strAbout+="浠���\t: 杩���褰�澶╂�ユ��\n";
+   strAbout+=">\t: 涓�涓���\n";
+   strAbout+="<<\t: 涓�涓�骞�\n";
+   strAbout+="\nWeb�ュ�����╄��ユ�т欢\tVer:v1.0\t\nDesigned By:wxb \t\t2004.11.22\t\n";
    alert(strAbout);
 }
 
@@ -426,10 +426,10 @@ if(calendar.calendarPad.style.display=="none"){
 }
 switch(window.event.keyCode){
    case 27 : calendar.hide(); break; //ESC
-   case 37 : calendar.prevMonth.onmousedown(); break;//←
-   case 38 : calendar.prevYear.onmousedown();break; //↑
-   case 39 : calendar.nextMonth.onmousedown(); break;//→
-   case 40 : calendar.nextYear.onmousedown(); break;//↓
+   case 37 : calendar.prevMonth.onmousedown(); break;//��
+   case 38 : calendar.prevYear.onmousedown();break; //��
+   case 39 : calendar.nextMonth.onmousedown(); break;//��
+   case 40 : calendar.nextYear.onmousedown(); break;//��
    case 84 : calendar.goToday.onclick(); break;//T
    case 88 : calendar.hide(); break;   //X
    case 72 : calendar.about(); break;   //H 
@@ -477,9 +477,9 @@ document.writeln(str);
 var _fieldname;
 function _SetTime(tt) {
     _fieldname = tt;
-    var ttop = tt.offsetTop;    //TT控件的定位点高
-    var thei = tt.clientHeight;    //TT控件本身的高
-    var tleft = tt.offsetLeft;    //TT控件的定位点宽
+    var ttop = tt.offsetTop;    //TT�т欢��瀹�浣��归��
+    var thei = tt.clientHeight;    //TT�т欢��韬���楂�
+    var tleft = tt.offsetLeft;    //TT�т欢��瀹�浣��瑰��
     while (tt = tt.offsetParent) {
         ttop += tt.offsetTop;
         tleft += tt.offsetLeft;
@@ -505,18 +505,18 @@ function _select() {
       <td colspan="5" align="middle"><div align="center" class="style9"><p><img width="491"
       height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /><br />
       <span class="style7"><input name="textfield2" type="text"
-      onfocus="CalendarWebControl.show(this,false,this.value);" size="12" /> 日加班申请单</span></p>
+      onfocus="CalendarWebControl.show(this,false,this.value);" size="12" /> �ュ�����宠�峰��</span></p>
       </div></td>
     </tr>
     <tr>
-      <td width="735" class="style7">部门：<input name="y2" type="text" id="y2"
-      style="width: 50px" size="20"> 组别：<input name="y3" type="text" id="y3"
-      style="width: 50px" size="20">班别:<input name="y4" type="text" id="y4"
+      <td width="735" class="style7">�ㄩ��锛�<input name="y2" type="text" id="y2"
+      style="width: 50px" size="20"> 缁���锛�<input name="y3" type="text" id="y3"
+      style="width: 50px" size="20">����:<input name="y4" type="text" id="y4"
       style="width: 50px" size="20"></td>
-      <td width="66" class="style7">计加班费 </td>
+      <td width="66" class="style7">璁″����璐� </td>
       <td width="74" class="style7"><input name="radio" type="radio" id="radio" value="radio"
       checked="checked" /> </td>
-      <td width="63" class="style7">作调休用 </td>
+      <td width="63" class="style7">浣�璋�浼��� </td>
       <td width="69" class="style7"><input type="radio" name="radio" id="radio2" value="radio2"
       /> </td>
     </tr>
@@ -527,29 +527,29 @@ function _select() {
       <td colspan="5" align="center" bgcolor="#000000"><table width="2337" border="0"
       cellpadding="3" cellspacing="1" style="width: 1001px">
         <tr bgcolor="#FFFFFF" class="style1">
-          <td width="19" rowspan="2"><strong>序号</strong></td>
-          <td width="210" rowspan="2" align="center"><strong>姓名</strong></td>
-          <td width="210" rowspan="2" align="center"><strong>职务</strong></td>
-          <td colspan="2" align="center" width="188"><strong>申请加班时间</strong></td>
-          <td colspan="2" align="center" width="428"><strong>加班内容</strong></td>
-          <td width="210" rowspan="2" align="center"><strong>计划完成工作量</strong></td>
-          <td colspan="2" align="center" width="188"><strong>实际加班时间</strong></td>
-          <td colspan="2" align="center" width="428"><strong>加班内容</strong></td>
-          <td width="210" rowspan="2" align="center"><strong>实际完成工作量</strong></td>
-          <td width="166" align="center" colspan="3" valign="middle"><div align="center"><center><p><strong>加班时数(H)</strong></td>
+          <td width="19" rowspan="2"><strong>搴���</strong></td>
+          <td width="210" rowspan="2" align="center"><strong>濮���</strong></td>
+          <td width="210" rowspan="2" align="center"><strong>����</strong></td>
+          <td colspan="2" align="center" width="188"><strong>�宠�峰�����堕��</strong></td>
+          <td colspan="2" align="center" width="428"><strong>������瀹�</strong></td>
+          <td width="210" rowspan="2" align="center"><strong>璁″��瀹���宸ヤ���</strong></td>
+          <td colspan="2" align="center" width="188"><strong>瀹��������堕��</strong></td>
+          <td colspan="2" align="center" width="428"><strong>������瀹�</strong></td>
+          <td width="210" rowspan="2" align="center"><strong>瀹���瀹���宸ヤ���</strong></td>
+          <td width="166" align="center" colspan="3" valign="middle"><div align="center"><center><p><strong>�����舵��(H)</strong></td>
         </tr>
         <tr bgcolor="#FFFFFF" class="style1" align="center">
-          <td align="center" width="90"><strong>开始</strong></td>
-          <td align="center" width="90"><strong>结束</strong></td>
-          <td width="210" align="center"><strong>品名</strong></td>
-          <td width="210" align="center"><strong>工序</strong></td>
-          <td width="90" align="center"><strong>开始</strong></td>
-          <td width="90" align="center"><strong>结束</strong></td>
-          <td width="210" align="center"><strong>品名</strong></td>
-          <td width="210" align="center"><strong>工序</strong></td>
-          <td width="58" align="center"><strong>平时</strong></td>
-          <td width="58" align="center"><strong>双休</strong></td>
-          <td width="58" align="center"><strong>法定</strong></td>
+          <td align="center" width="90"><strong>寮�濮�</strong></td>
+          <td align="center" width="90"><strong>缁���</strong></td>
+          <td width="210" align="center"><strong>����</strong></td>
+          <td width="210" align="center"><strong>宸ュ�</strong></td>
+          <td width="90" align="center"><strong>寮�濮�</strong></td>
+          <td width="90" align="center"><strong>缁���</strong></td>
+          <td width="210" align="center"><strong>����</strong></td>
+          <td width="210" align="center"><strong>宸ュ�</strong></td>
+          <td width="58" align="center"><strong>骞虫��</strong></td>
+          <td width="58" align="center"><strong>��浼�</strong></td>
+          <td width="58" align="center"><strong>娉�瀹�</strong></td>
         </tr>
         <tr bgcolor="#FFFFFF" class="style1" align="center">
           <td width="19">1</td>
@@ -1072,7 +1072,7 @@ function _select() {
           <td width="58"><input type="text" name="T62" size="4"></td>
         </tr>
         <tr bgcolor="#FFFFFF" class="style1" align="center">
-          <td colspan="16" align="left" width="2329"><strong>1、加班申请单必须于加班当日16:00之前申报，假日加班必须于周五下午16：00之前申报，否则视为无效。</strong><p><strong>2、凡申报加班人员必须如实填写，全员监督，若发现填报加班而未到岗&amp;擅自离岗，或作与加班无关工作者，经查核属实，给予检举人员奖励现金50元/次，违反加班规定者，当日加班视为无效，同时，视情节严重程度将予以罚款&amp;记过处分，部门主管连带处罚（班长50元/次，课长100元/次）。</strong></td>
+          <td colspan="16" align="left" width="2329"><strong>1�������宠�峰��蹇�椤讳�����褰���16:00涔����虫�ワ����ュ����蹇�椤讳��ㄤ�涓���16锛�00涔����虫�ワ�����瑙�涓烘������</strong><p><strong>2���＄�虫�ュ����浜哄��蹇�椤诲�瀹�濉���锛��ㄥ�����ｏ��ュ���板～�ュ���������板�&amp;����绂诲�锛���浣�涓��������冲伐浣���锛�缁��ユ�稿�瀹�锛�缁�浜�妫�涓句汉��濂��辩�伴��50��/娆★�杩�������瑙�瀹���锛�褰��ュ����瑙�涓烘����锛����讹�瑙�����涓ラ��绋�搴�灏�浜�浠ョ�娆�&amp;璁拌�澶���锛��ㄩ�ㄤ富绠¤�甯�澶�缃�锛�����50��/娆★�璇鹃��100��/娆★���</strong></td>
         </tr>
       </table>
       </td>
@@ -1084,9 +1084,9 @@ function _select() {
       </td>
     </tr>
     <tr align="center">
-      <td colspan="5" class="style7"><span class="style11">※请依规定流程选取签核人�T、签核方式：串签。<br
+      <td colspan="5" class="style7"><span class="style11">�昏�蜂�瑙�瀹�娴�绋�����绛炬�镐汉锟�T��绛炬�告�瑰�锛�涓茬�俱��<br
       />
-      *申请流程：申请人&amp;rarr;单位主管&amp;rarr;部门主管&amp;rarr;稽核部门（警卫）/总务报餐单位</span></td>
+      *�宠�锋�绋�锛��宠�蜂汉&amp;rarr;��浣�涓荤��&amp;rarr;�ㄩ�ㄤ富绠�&amp;rarr;绋芥�搁�ㄩ��锛�璀���锛�/�诲�℃�ラ���浣�</span></td>
     </tr>
     <tr align="center">
       <td colspan="5" align="right" class="style7"><big><strong>QWX04D0008-06</strong></big></td>

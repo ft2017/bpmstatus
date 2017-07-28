@@ -3,43 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>无标题文档</title>
-<script language="JavaScript" type="text/JavaScript">
+<style type="text/css">
 <!--
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
+.style7 {font-size: 12px;"楷体_GB2312";}
+.STYLE2 {
+	font-size: 14px;
+	font-weight: bold;
 }
-
-function MM_setTextOfTextfield(objYY,objMM,objDD) { //v3.0
-  var d = new Date();
-  var obj = MM_findObj(objYY); if (obj) obj.value = d.getFullYear();
-  var obj = MM_findObj(objMM); if (obj) obj.value = d.getMonth() + 1;
-  var obj = MM_findObj(objDD); if (obj) obj.value = d.getDate();
-}
-
-function MM_setday(objYY1,objMM1,objDD1,objYY2,objMM2,objDD2,objDay) { //v3.0
-  var sumY,sumM,sumD,sum;
-  var obj = MM_findObj(objYY2); if (obj) sumY=obj.value;
-  var obj = MM_findObj(objMM2); if (obj) sumM=obj.value;
-  var obj = MM_findObj(objDD2); if (obj) sumD=obj.value;
-  var obj = MM_findObj(objYY1); if (obj) sumY=sumY-obj.value;
-  var obj = MM_findObj(objMM1); if (obj) sumM=sumM-obj.value;
-  var obj = MM_findObj(objDD1); if (obj) sumD=sumD-obj.value;
-  if (sumY*365+sumM*30+sumD+1 >= 0){
-  var obj = MM_findObj(objDay); if (obj) obj.value=(sumY*365)+(sumM*30)+sumD+1;
-  }
-  else{
-  var obj = MM_findObj(objDay); if (obj) obj.value=0;
-  }
-}
-//-->
-</script>
-<script
-language="javascript">
+.STYLE8 {color: #FF0000}
+-->
+</style>
+<script language="javascript">
 function atCalendarControl(){
 var calendar=this;
 this.calendarPad=null;
@@ -471,210 +445,117 @@ calendar.setup();
 var CalendarWebControl = new atCalendarControl();
 -->
 </script>
-
 </head>
 
 <body>
-<div>
-  <div align="left">
-    <table width="800">
-      <tr>
-        <td width="720"><div align="center"><img src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" width="647" height="40" /></div></td>
-        <td width="68">&nbsp;</td>
-      </tr>
-    </table>
-  </div>
-</div>
-<div>
-  <div align="left">
-    <table width="800">
-      <tr>
-        <td width="721"><div align="center">治（夹）具验证报告 </div></td>
-        <td width="67">&nbsp;</td>
-      </tr>
-    </table>
-  </div>
-</div>
-<div>
-  <table width="726" height="25" border="1">
+<form id="form1" name="form1" method="post" action="">
+  <table width="600" cellspacing="1">
     <tr>
-      <td width="81">产品名称</td>
-      <td width="277"><form id="form9" name="form9" method="post" action="">
-        <label>
-          <input name="textfield9" type="text" size="36" />
-          </label>
-      </form>
-      </td>
-      <td width="88"><div align="justify">制造厂商</div></td>
-      <td width="252"><form id="form10" name="form10" method="post" action="">
-        <label>
-          <input name="textfield10" type="text" size="30" />
-          </label>
-      </form>
-      </td>
+      <td><div align="center"><img width="491" height="47" src="http://eip.fulltech-metal.com/SharedPics/LOGO_01.jpg" /></div></td>
     </tr>
   </table>
-  <div>
-    <div></div>
-  </div>
-</div>
-<div>
-  <table width="726" border="1">
+  <table width="600" border="1" cellspacing="1">
     <tr>
-      <td width="81">模具名称</td>
-      <td width="77"><form id="form11" name="form11" method="post" action="">
-        <label>
-          <input name="textfield11" type="text" size="10" />
-          </label>
-      </form>
-      </td>
-      <td width="44">模号</td>
-      <td width="144"><form id="form12" name="form12" method="post" action="">
-        <label>
-          <input name="textfield12" type="text" size="15" />
-          </label>
-      </form>
-      </td>
-      <td width="89"><div align="justify">验证日期</div></td>
-      <td width="251"><form id="form13" name="form13" method="post" action="">
-        <label>
-          <input name="textfield13" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="30" />
-          </label>
-      </form>
-      </td>
+      <td width="587"><p align="center" class="STYLE2">委外教育训练心得报告 </p></td>
     </tr>
   </table>
-  <div>
-    <table width="726" border="1">
-      <tr>
-        <td width="41">种类</td>
-        <td width="316"><form id="form1" name="form1" method="post" action="">
-          <label>
-            <select name="select">
-              <option>治具</option>
-              <option>夹具</option>
-              <option>其他</option>
-            </select>
-            </label>
-          <label>
-          <input name="textfield3" type="text" size="30" />
-          </label>
-        </form>        </td>
-        <td width="92">模穴数</td>
-        <td width="249"><form id="form14" name="form14" method="post" action="">
-          <label>
-            <input name="textfield14" type="text" size="30" />
-            </label>
-        </form>
-        </td>
-      </tr>
-    </table>
-    <div></div>
-  </div>
-</div>
-<div>
-  <table width="726" border="1">
+  <table width="600" border="1" cellpadding="1" cellspacing="1">
     <tr>
-      <td width="125">试模机台及型号</td>
-      <td width="235"><form id="form15" name="form15" method="post" action="">
-        <label>
-          <input name="textfield15" type="text" size="30" />
-          </label>
-      </form>
-      </td>
-      <td width="89">试模单位</td>
-      <td width="249"><form id="form16" name="form16" method="post" action="">
-        <label>
-          <input name="textfield16" type="text" size="30" />
-          </label>
-      </form>
-      </td>
+      <td width="72" class="style7"><div align="center" class="style7">
+        <div align="center">部 门</div>
+      </div></td>
+      <td width="82" class="style7"><div align="center"><span class="style7">
+        <input name="textarea4" type="text" id="textarea" value="" size="10" />
+      </span></div></td>
+      <td width="72" class="style7"><div align="center" class="style7">
+        <div align="center">职 位</div>
+      </div></td>
+      <td width="114" class="style7"><div align="center">
+        <input name="textfield4" type="text" size="10" />
+      </div></td>
+      <td width="83" class="style7"><div align="center"><span class="style7"> 姓 名</span></div></td>
+      <td width="144" class="style7"><div align="center">
+        <input name="textfield7" type="text" size="17" />
+      </div></td>
+    </tr>
+    <tr>
+      <td class="style7"><div align="center"><span class="style7">训练课程</span></div></td>
+      <td class="style7"><div align="center">
+        <input name="textfield2" type="text" size="10" />
+      </div></td>
+      <td class="style7"><div align="center"><span class="style7">训练时数</span></div></td>
+      <td class="style7"><div align="center">
+        <input name="textfield5" type="text" size="10" />
+      </div></td>
+      <td class="style7"><div align="center"><span class="style7">训练日期</span></div></td>
+      <td class="style7"><div align="center">
+       <input name="textfield2" type="text" onfocus="CalendarWebControl.show(this,false,this.value);" size="12" />
+      </div></td>
+    </tr>
+    <tr>
+      <td class="style7"><div align="center"><span class="style7">授课单位</span></div></td>
+      <td class="style7"><div align="center">
+        <input name="textfield3" type="text" size="10" />
+      </div></td>
+      <td class="style7"><div align="center"><span class="style7">讲 师</span></div></td>
+      <td class="style7"><div align="center">
+        <input name="textfield6" type="text" size="10" />
+      </div></td>
+      <td class="style7"><div align="center"><span class="style7">训练地点</span></div></td>
+      <td class="style7"><div align="center">
+        <input name="textfield9" type="text" size="17" />
+      </div></td>
+    </tr>
+    <tr>
+      <td class="style7"><div align="center"><span class="style7">资 料</span></div></td>
+      <td colspan="5" class="style7"><div align="center"><span class="style7">
+        <input type="checkbox" name="checkbox" value="checkbox" />
+        讲义
+        <input type="checkbox" name="checkbox2" value="checkbox" />
+        投影片
+        <input type="checkbox" name="checkbox3" value="checkbox" />
+        书籍
+        <input type="checkbox" name="checkbox4" value="checkbox" />
+        其他
+        <input name="textfield8" type="text" size="20" />
+      </span></div></td>
+    </tr>
+    <tr>
+      <td colspan="6"><div align="center" class="STYLE2">训 练 内 容 摘 录</div></td>
+    </tr>
+    <tr>
+      <td colspan="6"><textarea name="textarea" cols="80" rows="4"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="6"><div align="center" class="STYLE2">训 练 心 得 报 告</div></td>
+    </tr>
+    <tr>
+      <td colspan="6"><textarea name="textarea2" cols="80" rows="6"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="6"><div align="center" class="STYLE2">建 议 公 司 改 善 改 善 意 见 或 计 划 案</div></td>
+    </tr>
+    <tr>
+      <td colspan="6"><textarea name="textarea3" cols="80" rows="4"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="6"><div align="right" class="style7">报 告 人:
+          <input name="textfield94" type="text" size="10" /> 
+      </div></td>
     </tr>
   </table>
-  <div>
-    <table width="726" height="148" border="1" cellspacing="0">
-      <tr>
-        <td width="13" height="146" valign="top"><p>试<br />
-          模<br />
-          状<br />
-        况<br />
-        记<br />
-        录</p>          </td>
-        <td width="324"  valign="top"><div>
-          <form id="form2" name="form2" method="post" action="">
-            <label>
-              <textarea name="textfield" cols="40" rows="8" style="overflow:hidden"></textarea>
-              </label>
-            <p>试模者：
-              <label>
-              <input type="text" name="textfield2" />
-              </label>
-            </p>
-          </form>
-          </div></td>
-        <td width="23">简<br />
-        图</td>
-        <td width="348" valign="top"><form id="form3" name="form3" method="post" action="" >
-          <label>
-          <textarea name="textarea" cols="42" rows="10"style="overflow:hidden"></textarea>
-          </label>
-        </form>        </td>
-      </tr>
-    </table>
-    <div>
-      <div></div>
-    </div>
-  </div>
-</div>
-<div>
-<table width="727" height="40" border="1" cellspacing="0">
+  <table>
     <tr>
-      <td width="82" height="46" valign="top"><p>判断<br />
-      结果</p>
-      </td>
-      <td width="635" valign="top"><form id="form4" name="form4" method="post" action="">
-        
-          <textarea name="textfield4" cols="80" rows="4"style="overflow:hidden"></textarea>
-          
-      </form>
+     <td width="592">
+  <p class="style7">一、说明 
+  <ol><li>凡本公司员工接受外部教育训练之后，应填写此单，总结训练成果和心得、提出改进建议等。 </li>
+    <li>此单由人资课保存，保存期限为1年。 </li>
+  </ol>
+  <p><span class="style7"><span class="STYLE8"><strong>※请依规定流程选取签核人员、签核方式：串签</strong> <br />
+        <strong>谦和流程：</strong> <strong>报告人→部门主管→所属副总→经办（人资）</strong></span> </span></p>
       </td>
     </tr>
-  </table>
-<div>
-  <table width="727" border="1">
-    <tr>
-      <td width="84">核准</td>
-      <td width="91"><form id="form5" name="form5" method="post" action="">
-        <label>
-          <input name="textfield5" type="text" size="13" />
-          </label>
-      </form>
-      </td>
-      <td width="61">审核</td>
-      <td width="91"><form id="form6" name="form6" method="post" action="">
-        <label>
-          <input name="textfield6" type="text" size="13" />
-          </label>
-      </form>
-      </td>
-      <td width="77">使用单位</td>
-      <td width="84"><form id="form7" name="form7" method="post" action="">
-        <label>
-          <input name="textfield7" type="text" size="12" />
-          </label>
-      </form>
-      </td>
-      <td width="82">制表</td>
-      <td width="103"><form id="form8" name="form8" method="post" action="">
-        <label>
-          <input name="textfield8" type="text" size="13" />
-          </label>
-      </form>
-      </td>
-    </tr>
-  </table>
-  <div>QWY20D0001-11 1.0 </div>
-</div>
-</div>
+      </table>
+</form>
 </body>
 </html>

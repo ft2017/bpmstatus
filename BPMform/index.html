@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <link rel="stylesheet" type="text/css" href="http://10.10.1.80:8080/static/t100/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://10.10.1.80:8080/static/t100/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+
+        <div class="container-fluid">
+            <a class="btn btn-primary " href='http://10.10.1.14/bpmstatus/'> 回到目錄 </a>
+            <h2>BPM信息回传T100操作手册</h2>
+            <h3>安装Eclipse JavaEE</h3>
+            安装Eclipse JavaEE Lindigo Serice Release 2版本<br>
+            需要配置JDK1.5环境变量增加jar包（axis.jar ,custom-nana-util.jar,nana-serice-client.jar）
+            <h3>JAVA</h3>
+            设定Installed JREs<br>
+            Eclipse执行windows->preferences<br>
+            直接搜索 installed jres<br>
+            新增一个JRE环境<br>
+            选择JRE形态为 Standard VM<br>
+            设定 jdk路径<br>
+            <img src="jre.png" width="800"/><br>
+            设定runtime environment<br>
+            执行windows->preferences<br>
+            直接搜索 runtime environment<br>
+            新增一个Server环境<br>
+            选择 AP Server形态为 Jboss v4.0<br>
+            设定 JRE环境(jdk1.5.0_15)以及 jboss路径<br>
+            <img src="jboss.png" width="800"/><br>
+            设定Xdoclet<br>
+            执行windows->preferences<br>
+            直接搜索 xdoclet<br>
+            设定路径并指定1.2.3版<br>
+             <img src="xdoclet.png" width="800"/><br>
+             建完所有项目会自动生成7个.java
+             在xxxBean.java里编程每个新增的方法前都需要加上模版注释T100那里才能够识别<br>
+             完成所有代码编译之后需要Run XDoclet本地运行一遍
+             <h3>打包成 EAR包</h3>
+             放到服务器C：\BPM\jboss-4.2.3GA\server\default\deploy =>停止 BPM server 关掉 cmd => 请理缓存 default\data tmp work 删除 => 重启服务器C：\BPM\run.bat<br>
+             抓取T100数据 在服务器BPM\jboss-4.2.3GA\server\default\deploy\<a href="nana-ds.xml">nana-ds</a>里编写<br>
+             如图 <img src="nana-ds.png" width="800"><br>
+             <h3>流程设计</h3>
+             在流程最后一关加上“服务任务” =>叫用应用程序=> +session bean <br>
+             <img src="sessionbean1" /><br>
+             <img src="sessionbean2" />
+             <h3>实际测试</h3>
+             在.33里测试结果如图<br>
+              <img src="backup1" /><br>
+             <img src="backup2" />
+        </div>
+    </body>
+</html>

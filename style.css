@@ -35,3 +35,4 @@ table.gridtable td {
   background-color: yellow;
   color: black;
 }
+ #nav {width:30px; height: 40px; border: 0px solid #D4CD49; position:fixed;right:0;top:93% }

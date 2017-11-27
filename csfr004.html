@@ -1,0 +1,64 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="http://10.10.1.80:8080/static/t100/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://10.10.1.80:8080/static/t100/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>BPM status</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <a id="top"></a>
+<a id="nav" href="#top">回到<br>顶部</a>
+        <div class="container-fluid">
+            <h1>Csfr004报表计算公式</h1>
+
+此报表可依照勾选显示工单工艺明细和工作站汇总，两种结果<br>
+
+各工作站库存汇总表说明如下：<br>
+此报表依照“产品、产品特征、工作站、部门、是否委外”进行分组汇总，其他各栏位取值逻辑如下：
+
+<h3></h3>
+<ol>
+    <li>良品在制库存：<br>
+说明：<br>
+TYZ001压铸工序的在制 = 待转入 +待转出+待检验+待完工<br>
+除“压铸、委外”以外的厂内工序在制= 待movein +在制+待move out+待pqc+待check out</li>
+    <li>待转入量：<br>
+统计asft301上的该工作站的待move in 合计数量</li>
+    <li>待检验量：<br>
+待检验分两种：一种是厂内的待PQC,一种是厂外的待IQC</li>
+    <li>待完工量：<br>
+统计asft301上的该工作站的待check out合计数量</li>
+    <li>待转出量：<br>
+统计asft301上的该工作站的待move out合计数量</li>
+    <li>工单未完工量：<br>
+工单未完工量=工单量-已入库量</li>
+    <li>差异值:<br>
+差异量 = 工单未完工量–待转出量</li>
+    <li>成品库存<br>
+成品库存取该产品当前的可用库存量</li>
+    <li>订单未交货量<br>
+订单未交货量= 订单量-已出货量</li>
+    <li>待入库量<br>
+工单未入库量取的是未过账的asft340的数量</li>
+    <li>需补再制量<br>
+需补再制量 = 订单未交量–成品库存量- 工单未交量</li>
+    <li>待判定量<br>
+待判定量取该产品asft336的未过账有效的单据数量</li>
+    <li>返工量<br>
+返工量取该产品asft338的返工数量+PQC 判定NG的数量</li>
+    <li>报废量<br>
+报废量取该产品asft336的已判定报废数量</li>
+</ol>
+</div>
+</body>
+</html>

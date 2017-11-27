@@ -36,3 +36,35 @@ table.gridtable td {
   color: black;
 }
  #nav {width:30px; height: 40px; border: 0px solid #D4CD49; position:fixed;right:0;top:93% }
+ 
+.img{ width: 400px; height: 200px;
+       border:2px solid #fff; 
+       box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc; 
+      -webkit-box-shadow: 10px 10px 5px #ccc; 
+      -khtml-box-shadow: 10px 10px 5px #ccc; 
+}
+.img1{width: 400px; height: 200px; 
+     border:2px solid #fff; 
+    
+     -moz-box-shadow: 10px 10px 5px #ccc; 
+     -webkit-box-shadow: 10px 10px 5px #ccc; 
+     box-shadow: 10px 10px 5px #ccc; 
+     -moz-border-radius:25px; 
+     -webkit-border-radius:25px; border-radius:25px;}
+.img2 { width: 400px; height: 200px; border:2px solid #fff;
+  
+       color:white; font-size:50px;
+       -moz-box-shadow: 10px 10px 50px #ccc; 
+       -webkit-box-shadow: 10px 10px 50px #ccc; 
+       box-shadow: 10px 10px 50px #ccc; }
+.img3{ width: 190px; height: 190px; border:2px solid #fff; background: url(img/duck.png) no-repeat; -moz-box-shadow: 0px 6px 5px #ccc; -webkit-box-shadow: 0px 6px 5px #ccc; box-shadow: 0px 6px 5px #ccc; -moz-border-radius:190px; -webkit-border-radius:190px; border-radius:190px;}
+.img4{ width: 400px; height: 200px; border:2px solid #fff; background: url(img/tiger.png) no-repeat; -moz-box-shadow: inset 50px 50px 50px #fff; -webkit-box-shadow: inset 10px 10px 50px #fff; box-shadow: inset 10px 10px 50px #fff;} 
+.img5{width: 270px; height: 150px; border:2px solid #fff; background: url(img/fish.png) no-repeat; 
+     box-shadow: 10px  10px 40px #FFB6C1; 
+     color:white; 
+     font-size:50px; 
+     border-top-left-radius:10px; 
+     border-top-right-radius:10px; 
+     border-bottom-left-radius:0px;
+     border-bottom-right-radius:0px;}
